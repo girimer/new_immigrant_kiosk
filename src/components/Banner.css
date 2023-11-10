@@ -1,0 +1,47 @@
+.banner {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    background-color: #FF9900;
+    color: #fff;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px
+  }
+  
+  .moving-text-container {
+    white-space: nowrap;
+    /*animation: moveText 30s linear infinite; /* Adjust the duration as needed */
+    text-align: left;
+  }
+  
+  .moving-text {
+    display: inline-block;
+    padding-right: 50px;
+    padding-left: 25px;
+    color: black;
+  }
+  
+  @keyframes moveText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%); /* Move the text all the way to the left */
+    }
+  }
+
+  .date-time-container {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    height: 30px;
+  }
+  
+  .date-time {
+    padding: 5px;
+    padding-right: 25px;
+    color: black;
+  }
+  

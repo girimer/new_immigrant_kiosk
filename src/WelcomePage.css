@@ -1,0 +1,52 @@
+.welcome-message {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    padding-top: 70px;
+    height: 35vh;
+    background-color: white;
+  }
+
+  .welcome-message-content {
+  text-align: center;
+  z-index: 1; /* Overlay the text and button on top of the background image */
+}
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: red
+  }
+  
+  p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  .get-started-button {
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .get-started-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .welcome-image {
+    position: absolute;
+    top: 500;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Cover slightly more than the bottom half */
+    background-image: url('./Images/WelcomePagePic.jpg'); /* Replace with your image URL */
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
