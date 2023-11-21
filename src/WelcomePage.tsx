@@ -1,4 +1,6 @@
 import "./WelcomePage.css";
+import React, { MouseEvent } from 'react';
+import "./pages/LanguageSelection";
 const WelcomeMessage = () => {
   return (
     <>
