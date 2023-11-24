@@ -1,8 +1,11 @@
-import LanguageButton from "../components/buttons/LanguageButton";
 import Typography from "@mui/material/Typography";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Button } from "@mui/material";
 import { Icon } from '@mui/material';
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+
+
 export default function LanguageScreen() {
   const iconStyle = {
     padding: "16px", // Adjust the padding value as needed
@@ -16,6 +19,12 @@ export default function LanguageScreen() {
     <Icon>
         <img alt="edit" src="./src/Images/684833.svg"/>
     </Icon>
+  );
+  const PhoneIcon = (
+      <PhoneEnabledIcon style={{fill: "black"}}/>
+  );
+  const buildingIcon = (
+    <LocationCityIcon style={{fill: "black"}}/>
   );
   return (
     <div>
@@ -33,6 +42,8 @@ export default function LanguageScreen() {
       Programs and services are offered at facilities throughout the province, including hospitals, clinics, continuing care facilities, cancer centers, 
       mental health facilities and community health sites.
       </Typography>
+      <img src="./src/Images/hospitalimage.png" width="824" height="478">
+      </img>
       <Typography>
         <strong>
         Tap to learn more about any of the following
@@ -40,8 +51,8 @@ export default function LanguageScreen() {
       </Typography>
       <div className="flex flex-row justify-center" >
           <Button variant="outlined" style={buttonStyle} color="error" startIcon={cardIcon}>Alberta Health Card</Button>
-          <Button variant="outlined" style={buttonStyle} color="error">Health Link</Button>
-          <Button variant="outlined" style={buttonStyle} color="error">Hospitals</Button>
+          <Button variant="outlined" style={buttonStyle} color="error" startIcon={PhoneIcon}>Health Link</Button>
+          <Button variant="outlined" style={buttonStyle} color="error" startIcon={buildingIcon}>Hospitals</Button>
         </div>
     </div>
   );
