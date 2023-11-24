@@ -1,16 +1,16 @@
-import LanguageDropdown from "./components/LanguageDropdown";
-import Banner from "./components/Banner";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WelcomeMessage from "./WelcomePage";
-import MedicalScreen from "./pages/MedicalScreen"
+import MedicalScreen from "./pages/MedicalScreen";
+import LanguageScreen from "./pages/LanguageSelection";
 
 function App() {
   return (
-    <div>
-      <Banner />
-      <LanguageDropdown />
-      {/* <WelcomeMessage /> */}
-      <MedicalScreen/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<WelcomeMessage />} />
+        <Route path="LanguageScreen/" element={<LanguageScreen />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
