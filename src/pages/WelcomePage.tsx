@@ -1,8 +1,6 @@
 import "./WelcomePage.css";
-import React, { MouseEvent } from "react";
-import "./pages/LanguageSelection";
-import LanguageDropdown from "./components/LanguageDropdown";
-import Banner from "./components/Banner";
+import LanguageDropdown from "../components/LanguageDropdown";
+import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 
 const WelcomeMessage = () => {
