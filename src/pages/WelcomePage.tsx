@@ -1,14 +1,14 @@
 import "./WelcomePage.css";
-import LanguageDropdown from "../components/LanguageDropdown";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 
-const WelcomeMessage = () => {
+const WelcomePage = () => {
   return (
     <>
       <div>
-        <Banner />
-        <LanguageDropdown />
+        <div style={{ height: "40px" }}>
+          <Banner />
+        </div>
         <div className="welcome-message">
           <div className="welcome-message-content">
             <h1>Welcome to Calgary</h1>
@@ -27,4 +27,4 @@ const WelcomeMessage = () => {
   );
 };
 
-export default WelcomeMessage;
+export default WelcomePage;
