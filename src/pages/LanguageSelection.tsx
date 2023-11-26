@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 export default function LanguageScreen() {
   const iconStyle = {
@@ -11,6 +12,7 @@ export default function LanguageScreen() {
   };
   return (
     <div>
+      <Header />
       <ArrowBackIcon
         fontSize="large"
         htmlColor="red"

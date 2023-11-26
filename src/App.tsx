@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import WelcomeMessage from "./pages/WelcomePage";
+import WelcomePage from "./pages/WelcomePage";
 import MedicalScreen from "./pages/MedicalScreen";
 import LanguageScreen from "./pages/LanguageSelection";
 import ServicesScreen from "./pages/ServicesScreen";
@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<WelcomeMessage />} />
+        <Route path="/" element={<WelcomePage />} />
         <Route path="/LanguageScreen" element={<LanguageScreen />} />
         <Route path="/MedicalScreen" element={<MedicalScreen />} />
         <Route
