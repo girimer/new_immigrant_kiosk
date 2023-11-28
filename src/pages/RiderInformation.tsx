@@ -1,14 +1,13 @@
 import ExitButton from "../components/buttons/ExitButton";
 import BackButton from "../components/buttons/BackButton";
 import ServiceButton from "../components/buttons/ServiceButton";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import DirectionsTransitIcon from "@mui/icons-material/DirectionsTransit";
 import CommuteIcon from "@mui/icons-material/Commute";
 import RiderDialogBox from "../components/RiderDialogBox";
 import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import redLineImage from "../../public/red lines.png";
 import { useState } from "react";
 
 type ArrowProps = {
@@ -16,23 +15,12 @@ type ArrowProps = {
 };
 
 export default function RiderInformation() {
-  const [showLeftArrow, setShowLeftArrow] = useState(0);
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("val");
-  const [serviceButtonID, setServiceButtonID] = useState(0);
+  const [dialogBoxContent, setDialogBoxContent] = useState(0);
 
-  function LeftArrow({ val }: ArrowProps) {
-    if (val === 0) {
-      return null;
-    }
-    return (
-      <div className="flex items-center" onClick={leftOnClick}>
-        <ArrowBackIosIcon />
-      </div>
-    );
-  }
-
-  const handleClickOpen = () => {
+  const handleClickOpen = (id: number) => {
+    setDialogBoxContent(id);
     setOpen(true);
   };
 
@@ -40,53 +28,72 @@ export default function RiderInformation() {
     setOpen(false);
   };
 
-  function rightOnClick() {
-    setShowLeftArrow(1);
-    setServiceButtonID(serviceButtonID + 1);
+  function PlanDialogBoxContent() {
+    if (dialogBoxContent === 0) {
+      return (
+        <>
+          <DialogTitle>Plan your trip</DialogTitle>
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <iframe
+            width="600"
+            height="450"
+            style={{ border: "0" }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps/embed/v1/directions?key=${
+              import.meta.env.VITE_GMAPS_KEY
+            }
+            &origin=Crowfoot+Station+Calgary
+            &destination=Dalhousie+Station+Calgary
+            &mode=transit`}
+          ></iframe>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <DialogTitle>Bus Lines</DialogTitle>
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <div>
+            Red lines goes from Tuscany Station to Somerset station and vise
+            verisa.
+          </div>
+          <img src={redLineImage} alt="Red Line" />
+          <div>
+            By Zeekakboos - Own work, CC BY-SA 4.0,
+            https://commons.wikimedia.org/w/index.php?curid=130293156
+          </div>
+        </>
+      );
+    }
   }
 
-  function leftOnClick() {
-    setShowLeftArrow(0);
-    setServiceButtonID(serviceButtonID - 1);
-  }
-
-  function dialogBoxContent() {
+  function ShowServiceButtons() {
     return (
       <>
-        <DialogTitle>Plan your trip</DialogTitle>;
-        <IconButton
-          aria-label="close"
-          onClick={handleClose}
-          sx={{
-            position: "absolute",
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-        <iframe
-          width="600"
-          height="450"
-          style={{ border: "0" }}
-          loading="lazy"
-          allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
-          src={`https://www.google.com/maps/embed/v1/directions?key=${
-            import.meta.env.VITE_GMAPS_KEY
-          }
-          &origin=Crowfoot+Station+Calgary
-          &destination=Dalhousie+Station+Calgary
-          &mode=transit`}
-        ></iframe>
-      </>
-    );
-  }
-
-  function ShowServiceButton() {
-    if (serviceButtonID === 0) {
-      return (
         <ServiceButton
           Icon={
             <CommuteIcon
@@ -95,11 +102,10 @@ export default function RiderInformation() {
             />
           }
           stringVal="Plan your Trip"
-          onClick={handleClickOpen}
+          onClick={() => {
+            handleClickOpen(0);
+          }}
         />
-      );
-    } else if (serviceButtonID === 1) {
-      return (
         <ServiceButton
           Icon={
             <DirectionsTransitIcon
@@ -108,10 +114,12 @@ export default function RiderInformation() {
             />
           }
           stringVal="Bus Lines"
-          onClick={handleClickOpen}
+          onClick={() => {
+            handleClickOpen(1);
+          }}
         />
-      );
-    }
+      </>
+    );
   }
 
   return (
@@ -120,17 +128,13 @@ export default function RiderInformation() {
         <ExitButton />
       </div>
       <div className="flex flex-row justify-center">
-        <LeftArrow val={showLeftArrow} />
-        <ShowServiceButton />
+        <ShowServiceButtons />
         <RiderDialogBox
           selectedValue={selectedValue}
           open={open}
           onClose={handleClose}
-          DialogBoxContent={dialogBoxContent}
+          DialogBoxContent={PlanDialogBoxContent}
         />
-        <div className="flex items-center" onClick={rightOnClick}>
-          <ArrowForwardIosIcon />
-        </div>
       </div>
       <BackButton />
     </div>
