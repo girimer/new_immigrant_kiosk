@@ -3,6 +3,7 @@ import WelcomePage from "./pages/WelcomePage";
 import MedicalScreen from "./pages/MedicalScreen";
 import LanguageScreen from "./pages/LanguageSelection";
 import ServicesScreen from "./pages/ServicesScreen";
+import RiderInformation from "./pages/RiderInformation";
 
 function App() {
   return (
@@ -11,6 +12,10 @@ function App() {
         <Route path="/" element={<WelcomePage />} />
         <Route path="/LanguageScreen" element={<LanguageScreen />} />
         <Route path="/MedicalScreen" element={<MedicalScreen />} />
+        <Route
+          path="/LanguageScreen/ServicesScreen/Transit/RiderInformation"
+          element={<RiderInformation />}
+        />
         <Route
           path="/LanguageScreen/ServicesScreen"
           element={<ServicesScreen />}

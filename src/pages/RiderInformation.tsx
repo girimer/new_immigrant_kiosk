@@ -8,6 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import redLineImage from "../../public/red lines.png";
+import Header from "../components/Header";
 import { useState } from "react";
 
 type ArrowProps = {
@@ -123,20 +124,20 @@ export default function RiderInformation() {
   }
 
   return (
-    <div className="flex flex-col">
-      <div className="text-end">
-        <ExitButton />
+    <>
+      <Header />
+      <div className="flex flex-col">
+        <div className="flex flex-row justify-center">
+          <ShowServiceButtons />
+          <RiderDialogBox
+            selectedValue={selectedValue}
+            open={open}
+            onClose={handleClose}
+            DialogBoxContent={PlanDialogBoxContent}
+          />
+        </div>
+        <BackButton />
       </div>
-      <div className="flex flex-row justify-center">
-        <ShowServiceButtons />
-        <RiderDialogBox
-          selectedValue={selectedValue}
-          open={open}
-          onClose={handleClose}
-          DialogBoxContent={PlanDialogBoxContent}
-        />
-      </div>
-      <BackButton />
-    </div>
+    </>
   );
 }

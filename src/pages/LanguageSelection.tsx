@@ -13,12 +13,6 @@ export default function LanguageScreen() {
   return (
     <div>
       <Header />
-      <ArrowBackIcon
-        fontSize="large"
-        htmlColor="red"
-        //   className="text-4xl"
-        style={iconStyle}
-      ></ArrowBackIcon>
       <Typography align="center" variant="h3" paddingBottom={"50px"}>
         Select Language
       </Typography>
@@ -27,18 +21,18 @@ export default function LanguageScreen() {
           <Link to="ServicesScreen/">
             <LanguageButton country="GB" language={"English"}></LanguageButton>
           </Link>
-          <LanguageButton country="GB" language={"Español"}></LanguageButton>
-          <LanguageButton country="GB" language={"Français"}></LanguageButton>
+          <LanguageButton country="MX" language={"Español"}></LanguageButton>
+          <LanguageButton country="FR" language={"Français"}></LanguageButton>
         </div>
         <div className="flex flex-row justify-center space-x-8">
-          <LanguageButton country="GB" language={"Deutsch"}></LanguageButton>
-          <LanguageButton country="GB" language={"Korean"}></LanguageButton>
-          <LanguageButton country="GB" language={"English"}></LanguageButton>
+          <LanguageButton country="DE" language={"Deutsch"}></LanguageButton>
+          <LanguageButton country="KR" language={"Korean"}></LanguageButton>
+          <LanguageButton country="GB" language={"Polski"}></LanguageButton>
         </div>
         <div className="flex flex-row justify-center space-x-8">
-          <LanguageButton country="GB" language={"English"}></LanguageButton>
-          <LanguageButton country="GB" language={"English"}></LanguageButton>
-          <LanguageButton country="GB" language={"English"}></LanguageButton>
+          <LanguageButton country="CN" language={"中国人"}></LanguageButton>
+          <LanguageButton country="JP" language={"日本語"}></LanguageButton>
+          <LanguageButton country="RU" language={"русский"}></LanguageButton>
         </div>
         <div className="flex flex-row justify-center">
           <Button variant="contained">Continue</Button>
