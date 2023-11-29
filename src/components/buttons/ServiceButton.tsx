@@ -1,38 +1,36 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 type ServiceButtonProps = {
-  Icon: React.ReactNode;
-  stringVal: string;
+  icon: React.ReactNode;
+  children: React.ReactNode;
   onClick: () => void;
 };
 export default function ServiceButton({
-  Icon,
-  stringVal,
+  icon,
+  children,
   onClick,
 }: ServiceButtonProps) {
   return (
-    <div>
-      <Button
-        variant="outlined"
-        style={{
-          color: "black",
-          borderColor: "red",
-          fontSize: "2rem",
-          textTransform: "none",
-        }}
-        onClick={onClick}
-      >
-        <div className="flex flex-col">
-          <div className="item-1">{Icon}</div>
-          <div className="item-1">
-            <Typography variant="h4" gutterBottom>
-              {stringVal}
-            </Typography>
-          </div>
-        </div>
-      </Button>
-    </div>
+    <Button
+      variant="outlined"
+      size="large"
+      style={{
+        color: "black",
+        borderColor: "red",
+        borderRadius: "18px",
+        borderWidth: "2px",
+      }}
+      sx={{
+        "&:hover": {
+          backgroundColor: "#DF0C2E",
+        },
+      }}
+      className="icon-button"
+      onClick={onClick}
+    >
+      <div className="icon">{icon}</div>
+      <div className="text">{children}</div>
+    </Button>
   );
 }

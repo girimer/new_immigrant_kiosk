@@ -1,15 +1,15 @@
-import ExitButton from "../components/buttons/ExitButton";
 import BackButton from "../components/buttons/BackButton";
 import ServiceButton from "../components/buttons/ServiceButton";
-import DirectionsTransitIcon from "@mui/icons-material/DirectionsTransit";
-import CommuteIcon from "@mui/icons-material/Commute";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import RiderDialogBox from "../components/RiderDialogBox";
 import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import redLineImage from "../../public/red lines.png";
+import redLineImage from "/src/red lines.png";
 import Header from "../components/Header";
 import { useState } from "react";
+import { faBus, faCalendar } from "@fortawesome/free-solid-svg-icons";
+import "../components/buttons/ServicesButtton.css";
 
 type ArrowProps = {
   val: number;
@@ -94,38 +94,35 @@ export default function RiderInformation() {
 
   function ShowServiceButtons() {
     return (
-      <>
+      <div className="button-row">
         <ServiceButton
-          Icon={
-            <CommuteIcon
-              className="text-lg"
-              sx={{ fontSize: "8rem", width: "250px" }}
-            />
-          }
-          stringVal="Plan your Trip"
+          icon={<FontAwesomeIcon icon={faCalendar} />}
           onClick={() => {
             handleClickOpen(0);
           }}
-        />
+        >
+          Plan your Trip
+        </ServiceButton>
         <ServiceButton
-          Icon={
-            <DirectionsTransitIcon
-              className="text-lg"
-              sx={{ fontSize: "8rem", width: "250px" }}
-            />
-          }
-          stringVal="Bus Lines"
+          icon={<FontAwesomeIcon icon={faBus} />}
           onClick={() => {
             handleClickOpen(1);
           }}
-        />
-      </>
+        >
+          Bus Lines
+        </ServiceButton>
+      </div>
     );
   }
 
   return (
     <>
       <Header />
+      <h2 className="service-page-title">Rider Information</h2>
+      <p className="service-page-description">
+        Below you can find common rider information to help you travel using
+        Calgary Transit easier
+      </p>
       <div className="flex flex-col">
         <div className="flex flex-row justify-center">
           <ShowServiceButtons />

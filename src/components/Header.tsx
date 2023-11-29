@@ -6,7 +6,7 @@ import ExitButton from "./buttons/ExitButton";
 const Header = () => {
   return (
     <>
-      <div>
+      <div style={{ marginBottom: "30px" }}>
         <div style={{ height: "40px" }}>
           <Banner />
         </div>
