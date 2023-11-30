@@ -4,6 +4,7 @@ import MedicalScreen from "./pages/MedicalScreen";
 import LanguageScreen from "./pages/LanguageSelection";
 import ServicesScreen from "./pages/ServicesScreen";
 import RiderInformation from "./pages/RiderInformation";
+import FaresScreen from "./pages/FaresScreen";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -34,6 +35,10 @@ function App() {
           <Route
             path="/LanguageScreen/ServicesScreen/Transit/RiderInformation"
             element={<RiderInformation />}
+          />
+          <Route
+            path="/LanguageScreen/ServicesScreen/Transit/Fares"
+            element={<FaresScreen />}
           />
           <Route
             path="/LanguageScreen/ServicesScreen"

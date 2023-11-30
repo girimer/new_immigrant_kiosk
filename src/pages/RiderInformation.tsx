@@ -5,7 +5,7 @@ import RiderDialogBox from "../components/RiderDialogBox";
 import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import redLineImage from "/src/red lines.png";
+import redLineImage from "/src/Images/red lines.png";
 import Header from "../components/Header";
 import { useState } from "react";
 import { faBus, faCalendar } from "@fortawesome/free-solid-svg-icons";
