@@ -1,19 +1,56 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import WelcomeMessage from "./WelcomePage";
+import WelcomePage from "./pages/WelcomePage";
 import MedicalScreen from "./pages/MedicalScreen";
 import LanguageScreen from "./pages/LanguageSelection";
-import TransitScreen1 from "./pages/TransitScreenMain";
+import ServicesScreen from "./pages/ServicesScreen";
+import RiderInformation from "./pages/RiderInformation";
+import FaresScreen from "./pages/FaresScreen";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+  },
+});
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<WelcomeMessage />} />
-        <Route path="LanguageScreen/" element={<LanguageScreen />} />
-        <Route path="TransitScreen1/" element={<TransitScreen1 />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<WelcomePage />} />
+          <Route path="/LanguageScreen" element={<LanguageScreen />} />
+          <Route path="/MedicalScreen" element={<MedicalScreen />} />
+          <Route
+            path="/LanguageScreen/ServicesScreen/Transit/RiderInformation"
+            element={<RiderInformation />}
+          />
+          <Route
+            path="/LanguageScreen/ServicesScreen/Transit/Fares"
+            element={<FaresScreen />}
+          />
+          <Route
+            path="/LanguageScreen/ServicesScreen"
+            element={<ServicesScreen />}
+          />
+          <Route
+            path="/LanguageScreen/ServicesScreen/health"
+            element={<MedicalScreen />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
-
 export default App;
