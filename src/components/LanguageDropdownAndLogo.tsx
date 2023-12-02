@@ -1,8 +1,14 @@
 import React from "react";
 import Logo from "../Images/logo.png"; // Replace with your actual logo path
-import LanguageDropdown from "./languageDropdown";
+import LanguageDropdown from "./LanguageDropdown";
 
-const LanguageDropdownAndLogo: React.FC = () => {
+interface LanguageDropdownProps {
+  isVisible: boolean | null;
+}
+
+const LanguageDropdownAndLogo: React.FC<LanguageDropdownProps> = ({
+  isVisible,
+}) => {
   return (
     <div
       style={{
@@ -13,12 +19,12 @@ const LanguageDropdownAndLogo: React.FC = () => {
         paddingLeft: "18px",
       }}
     >
-      <LanguageDropdown />
+      <LanguageDropdown isVisible={isVisible} />
       <img
         style={{
-          alignContent: "center",
           height: "100%",
-          paddingRight: "35px",
+          marginLeft: "auto",
+          marginRight: "35px",
         }}
         src={Logo}
         alt="Logo"

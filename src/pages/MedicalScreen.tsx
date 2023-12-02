@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Button } from "@mui/material";
 import { Icon } from "@mui/material";
-export default function LanguageScreen() {
+export default function Languages() {
   const iconStyle = {
     padding: "16px", // Adjust the padding value as needed
     fontSize: "7rem",
