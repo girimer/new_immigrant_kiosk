@@ -37,7 +37,7 @@ function App() {
             <Route path="/Languages" element={<Languages />} />
             <Route path="/MedicalScreen" element={<MedicalScreen />} />
             <Route
-              path="/LanguageScreen/ServicesScreen/Transit"
+              path="/Languages/Services/Transit"
               element={<TransitScreen />}
             />
             <Route
