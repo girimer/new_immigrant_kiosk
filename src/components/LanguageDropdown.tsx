@@ -23,16 +23,36 @@ const languages: Language[] = [
 ];
 
 const getInitialState = () => {
-  const value = "us";
-  return value;
+  if (window.location.href === "http://127.0.0.1:5173/ServicesSpanish")
+    return "es";
+  return "us";
 };
-const LanguageDropdown: React.FC = () => {
+
+interface LanguageDropdownProps {
+  isVisible: boolean | null;
+}
+
+const LanguageDropdown: React.FC<LanguageDropdownProps> = ({ isVisible }) => {
   const [selectedLanguage, setSelectedLanguage] =
     React.useState(getInitialState);
 
   const handleChange = (e: any) => {
-    setSelectedLanguage(e.target.value as string);
+    const selectedCode = e.target.value as string;
+    setSelectedLanguage(selectedCode);
+
+    if (selectedCode !== "us") {
+      // Navigate to the static page for the selected language
+      window.location.href = `/${"ServicesSpanish"}`;
+      //window.location.href = `/LanguageScreen/ServicesScreen/ServicesSpanish`;
+    } else {
+      window.location.href = `/${"LanguageScreen/ServicesScreen"}`;
+    }
   };
+
+  // Check if isVisible is not null before rendering the component
+  if (isVisible === false) {
+    return null;
+  }
 
   return (
     <FormControl>

@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
+import HeaderSpanish from "../components/HeaderSpanish";
 import "../components/buttons/ServicesButtton.css";
 import Button from "../components/buttons/ServicesButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,42 +14,46 @@ import {
   faHouseChimney,
 } from "@fortawesome/free-solid-svg-icons";
 
-const ServicesPage: React.FC = () => {
+const ServicesSpanish: React.FC = () => {
   return (
     <>
-      <Header isLanguageDropdownVisible={true} rotateBannerText={false} />
+      <HeaderSpanish
+        isLanguageDropdownVisible={true}
+        rotateBannerText={false}
+      />
       <div>
-        <h2 className="service-page-title">Services</h2>
+        <h2 className="service-page-title">Servicios</h2>
         <p className="service-page-description">
-          No matter where you’re immigrating from, we provide a number of
-          services to help newcomers feel welcome and settle into their new
-          home. Tap to learn more about any of the following services and
-          resources available to you as a new Calgarian.
+          No importa de dónde esté inmigrando, le brindamos una serie de
+          servicios para ayudar a los recién llegados a sentirse bienvenidos y
+          adaptarse a su nuevo hogar. Toque para obtener más información sobre
+          cualquiera de los siguientes servicios y recursos disponibles para
+          usted como nuevo calgariano.
         </p>
         <div className="service-buttons">
           <div className="button-row">
             <Button to="./health" icon={<FontAwesomeIcon icon={faHeartbeat} />}>
-              Alberta Health Services
+              Servicios de salud de Alberta
             </Button>
 
             <Button
               to="./education"
               icon={<FontAwesomeIcon icon={faGraduationCap} />}
             >
-              Education
+              Educación
             </Button>
 
             <Button
               to="./job-assistance"
               icon={<FontAwesomeIcon icon={faSuitcase} />}
             >
-              Job Assistance
+              Asistencia laboral
             </Button>
             <Button
               to="./activities"
               icon={<FontAwesomeIcon icon={faBicycle} />}
             >
-              Activities
+              Actividades
             </Button>
           </div>
 
@@ -59,25 +63,25 @@ const ServicesPage: React.FC = () => {
               to="./Transit/RiderInformation"
               icon={<FontAwesomeIcon icon={faBus} />}
             >
-              Calgary Transit
+              Tránsito de Calgary
             </Button>
 
             <Button to="./social" icon={<FontAwesomeIcon icon={faUsers} />}>
-              Social Programs
+              Programas Sociales
             </Button>
 
             <Button
               to="./emergency-services"
               icon={<FontAwesomeIcon icon={faPhone} />}
             >
-              Emergency Services
+              Servicios de emergencia
             </Button>
 
             <Button
               to="./housing"
               icon={<FontAwesomeIcon icon={faHouseChimney} />}
             >
-              Housing
+              Alojamiento
             </Button>
           </div>
         </div>
@@ -86,4 +90,4 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-export default ServicesPage;
+export default ServicesSpanish;
