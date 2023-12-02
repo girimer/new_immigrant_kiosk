@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WelcomePage from "./pages/WelcomePage";
 import MedicalScreen from "./pages/MedicalScreen";
-import LanguageScreen from "./pages/LanguageSelection";
-import ServicesScreen from "./pages/ServicesScreen";
+import Languages from "./pages/LanguageSelection";
+import Services from "./pages/Services";
 import RiderInformation from "./pages/RiderInformation";
 import FaresScreen from "./pages/FaresScreen";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -33,22 +33,19 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<WelcomePage />} />
-            <Route path="/LanguageScreen" element={<LanguageScreen />} />
+            <Route path="/Languages" element={<Languages />} />
             <Route path="/MedicalScreen" element={<MedicalScreen />} />
             <Route
-              path="/LanguageScreen/ServicesScreen/Transit/RiderInformation"
+              path="/Languages/Services/Transit/RiderInformation"
               element={<RiderInformation />}
             />
             <Route
-              path="/LanguageScreen/ServicesScreen/Transit/Fares"
+              path="/Languages/Services/Transit/Fares"
               element={<FaresScreen />}
             />
+            <Route path="/Languages/Services" element={<Services />} />
             <Route
-              path="/LanguageScreen/ServicesScreen"
-              element={<ServicesScreen />}
-            />
-            <Route
-              path="/LanguageScreen/ServicesScreen/health"
+              path="/Languages/Services/health"
               element={<MedicalScreen />}
             />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />

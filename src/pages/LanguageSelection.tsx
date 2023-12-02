@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
-export default function LanguageScreen() {
+export default function Languages() {
   const rotatingTitles = [
     "Select Language",
     "Seleccione el idioma",
@@ -38,7 +38,7 @@ export default function LanguageScreen() {
       </Typography>
       <div className="flex flex-col space-y-8">
         <div className="flex flex-row justify-center space-x-8">
-          <Link to="ServicesScreen/">
+          <Link to="Services/">
             <LanguageButton country="GB" language={"English"}></LanguageButton>
           </Link>
           <LanguageButton country="MX" language={"Español"}></LanguageButton>

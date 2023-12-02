@@ -43,9 +43,9 @@ const LanguageDropdown: React.FC<LanguageDropdownProps> = ({ isVisible }) => {
     if (selectedCode !== "us") {
       // Navigate to the static page for the selected language
       window.location.href = `/${"ServicesSpanish"}`;
-      //window.location.href = `/LanguageScreen/ServicesScreen/ServicesSpanish`;
+      //window.location.href = `/Languages/Services/ServicesSpanish`;
     } else {
-      window.location.href = `/${"LanguageScreen/ServicesScreen"}`;
+      window.location.href = `/${"Languages/Services"}`;
     }
   };
 

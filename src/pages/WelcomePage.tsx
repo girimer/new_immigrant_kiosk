@@ -46,7 +46,7 @@ const WelcomePage = () => {
           <div className="welcome-message-content">
             <h1>{rotatingWelcomeTexts[currentWelcomeIndex]}</h1>
             <p>{rotatingInfoTexts[currentWelcomeIndex]}</p>
-            <Link to="LanguageScreen/">
+            <Link to="Languages/">
               <button className="get-started-button">
                 {rotatingButtonTexts[currentWelcomeIndex]}
               </button>
