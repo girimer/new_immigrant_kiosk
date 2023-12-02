@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WelcomePage from "./pages/WelcomePage";
 import MedicalScreen from "./pages/MedicalScreen";
-import LanguageScreen from "./pages/LanguageSelection";
-import ServicesScreen from "./pages/ServicesScreen";
+import Languages from "./pages/LanguageSelection";
+import Services from "./pages/Services";
 import RiderInformation from "./pages/RiderInformation";
 import FaresScreen from "./pages/FaresScreen";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { BannerProvider } from "./components/BannerContextProps";
+import ServicesSpanish from "./pages/ServicesSpanish";
 
 const theme = createTheme({
   typography: {
@@ -26,31 +28,31 @@ const theme = createTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<WelcomePage />} />
-          <Route path="/LanguageScreen" element={<LanguageScreen />} />
-          <Route path="/MedicalScreen" element={<MedicalScreen />} />
-          <Route
-            path="/LanguageScreen/ServicesScreen/Transit/RiderInformation"
-            element={<RiderInformation />}
-          />
-          <Route
-            path="/LanguageScreen/ServicesScreen/Transit/Fares"
-            element={<FaresScreen />}
-          />
-          <Route
-            path="/LanguageScreen/ServicesScreen"
-            element={<ServicesScreen />}
-          />
-          <Route
-            path="/LanguageScreen/ServicesScreen/health"
-            element={<MedicalScreen />}
-          />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+    <BannerProvider>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<WelcomePage />} />
+            <Route path="/Languages" element={<Languages />} />
+            <Route path="/MedicalScreen" element={<MedicalScreen />} />
+            <Route
+              path="/Languages/Services/Transit/RiderInformation"
+              element={<RiderInformation />}
+            />
+            <Route
+              path="/Languages/Services/Transit/Fares"
+              element={<FaresScreen />}
+            />
+            <Route path="/Languages/Services" element={<Services />} />
+            <Route
+              path="/Languages/Services/health"
+              element={<MedicalScreen />}
+            />
+            <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
+    </BannerProvider>
   );
 }
 export default App;

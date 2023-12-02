@@ -1,14 +1,14 @@
-import Banner from "./Banner";
+import BannerSpanish from "./BannerSpanish";
 import LanguageDropdownAndLogo from "./LanguageDropdownAndLogo";
-import Breadcrumb from "./Breadcrunb";
-import ExitButton from "./buttons/ExitButton";
+import ExitButtonSpanish from "./buttons/ExitButtonSpanish";
+import BreadcrumbSpanish from "./BreadcrumbSpanish";
 
 interface HeaderProps {
   isLanguageDropdownVisible: boolean | null;
   rotateBannerText: boolean | null;
 }
 
-const Header: React.FC<HeaderProps> = ({
+const HeaderSpanish: React.FC<HeaderProps> = ({
   isLanguageDropdownVisible,
   rotateBannerText,
 }) => {
@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({
     <>
       <div style={{ marginBottom: "30px" }}>
         <div style={{ height: "35px" }}>
-          <Banner rotateText={rotateBannerText} />
+          <BannerSpanish rotateText={rotateBannerText} />
         </div>
         <div style={{ height: "40px" }}>
           <LanguageDropdownAndLogo isVisible={isLanguageDropdownVisible} />
@@ -31,12 +31,12 @@ const Header: React.FC<HeaderProps> = ({
             paddingRight: "32px",
           }}
         >
-          <Breadcrumb />
-          <ExitButton />
+          <BreadcrumbSpanish />
+          <ExitButtonSpanish />
         </div>
       </div>
     </>
   );
 };
 
-export default Header;
+export default HeaderSpanish;
