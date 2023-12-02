@@ -1,25 +1,19 @@
-.banner {
+
+  .moving-text-container {
+    background-color: #FF9900;
     position: relative;
     height: 30px;
-    width: 100%;
-    background-color: #FF9900;
-    color: #fff;
-    overflow: hidden;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 5px
-  }
-  
-  .moving-text-container {
-    white-space: nowrap;
-    /*animation: moveText 30s linear infinite; /* Adjust the duration as needed */
-    text-align: left;
+    width: 85%;overflow: hidden;
   }
   
   .moving-text {
+    font-size: 15px;
+    padding: 5px;
+    white-space: nowrap;
+    /*animation: moveText 30s linear infinite; /* Adjust the duration as needed */
+    text-align: left;
     display: inline-block;
-    padding-right: 50px;
-    padding-left: 25px;
+    padding-left: 30px;
     color: black;
   }
   
@@ -33,15 +27,31 @@
   }
 
   .date-time-container {
+    width: 200px;
     position: absolute;
     top: 0;
-    right: 10px;
-    height: 30px;
+    right: 0px;
   }
   
   .date-time {
-    padding: 5px;
-    padding-right: 25px;
+    background-color: white;
     color: black;
+    position: absolute;
+    height: 30px;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    white-space: nowrap;
+    /*animation: moveText 30s linear infinite; /* Adjust the duration as needed */
+    text-align: left;
   }
   
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding-right: 8px;
+    font-weight: 700;
+    font-size: "200px";
+  }

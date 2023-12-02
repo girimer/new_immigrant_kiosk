@@ -15,7 +15,7 @@ import {
 const TransitPage: React.FC = () => {
   return (
     <>
-      <Header />
+      <Header isLanguageDropdownVisible={true} rotateBannerText={false} />
       <div>
         <h2 className="transit-page-title">
           Commute and travel safely

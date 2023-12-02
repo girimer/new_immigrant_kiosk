@@ -6,12 +6,9 @@ interface BannerProps {
   rotateText: boolean | null;
 }
 
-const Banner: React.FC<BannerProps> = ({ rotateText }) => {
+const BannerSpanish: React.FC<BannerProps> = ({ rotateText }) => {
   const rotatingTexts = [
-    "UPDATES: Calgary Local Immigrant Partnership Initiative aims to create a more welcoming community",
     "ACTUALIZACIONES: La Iniciativa de Asociación de Inmigrantes Locales de Calgary tiene como objetivo crear una comunidad más acogedora",
-    "更新：卡尔加里本地移民合作倡议旨在创建一个更加友好的社区",
-    // Add more languages as needed
   ];
 
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -64,4 +61,4 @@ const Banner: React.FC<BannerProps> = ({ rotateText }) => {
   );
 };
 
-export default Banner;
+export default BannerSpanish;

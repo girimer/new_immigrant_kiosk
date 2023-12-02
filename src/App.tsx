@@ -2,11 +2,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WelcomePage from "./pages/WelcomePage";
 import MedicalScreen from "./pages/MedicalScreen";
 import LanguageScreen from "./pages/LanguageSelection";
-import ServicesScreen from "./pages/ServicesScreen";
+import ServicesScreen from "./pages/Services";
 import TransitScreen from "./pages/TransitScreen";
 import RiderInformation from "./pages/RiderInformation";
 import FaresScreen from "./pages/FaresScreen";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { BannerProvider } from "./components/BannerContextProps";
+import ServicesSpanish from "./pages/ServicesSpanish";
 
 const theme = createTheme({
   typography: {

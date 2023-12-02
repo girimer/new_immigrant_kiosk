@@ -6,7 +6,7 @@ import calgaryTrainImage from "/src/Images/calgary-train.jpg";
 export default function FaresScreen() {
   return (
     <>
-      <Header />
+      <Header isLanguageDropdownVisible={true} rotateBannerText={false} />
       <div className="flex justify-between">
         <div
           className="left-col"

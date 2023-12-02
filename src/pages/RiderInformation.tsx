@@ -117,7 +117,7 @@ export default function RiderInformation() {
 
   return (
     <>
-      <Header />
+      <Header isLanguageDropdownVisible={true} rotateBannerText={false} />
       <h2 className="service-page-title">Rider Information</h2>
       <p className="service-page-description">
         Below you can find common rider information to help you travel using
