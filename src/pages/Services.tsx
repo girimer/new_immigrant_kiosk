@@ -56,7 +56,7 @@ const ServicesPage: React.FC = () => {
           {/* Second Row */}
           <div className="button-row">
             <Button
-              to="./Transit/RiderInformation"
+              to="./Transit"
               icon={<FontAwesomeIcon icon={faBus} />}
             >
               Calgary Transit

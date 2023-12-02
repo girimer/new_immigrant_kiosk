@@ -1,0 +1,66 @@
+  .transit-page-title {
+    text-align: left;
+    font-size: 1.8em; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #df0c2e;
+    margin-left: 5%;
+    margin-right: 50%;
+  }
+  
+  .transit-page-description {
+    text-align: left;
+    margin: 60px;
+    margin-left: 5%;
+    margin-right: 50%;
+  }
+
+  .transit-page-bold {
+    text-align: left;
+    font-weight: bold;
+    margin: 40px;
+    margin-left: 5%;
+    margin-right: 50%;
+  }
+  
+  .transit-buttons {
+    display: flex;
+    justify-content: left;
+    gap: 40px;
+    margin-left: 5%;
+    margin-right: 50%;
+    margin-top: 20px;
+  }
+  
+  .icon-button {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .icon {
+    margin: 1px;
+    font-size: 25px;
+  }
+  
+  .text {
+    margin: 0px;
+    font-size: 14 px;
+    font-family: "Arial", sans-serif;
+    text-transform: none;
+    width: 90%;
+    font-weight: 600;
+  }
+
+  .transit-image {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 50%;
+    height: 60%; /* Cover slightly more than the bottom half */
+    background-image: url('../Images/Transit1Pic.jpg'); /* Replace with your image URL */
+    background-size: 85% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

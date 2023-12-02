@@ -3,6 +3,7 @@ import WelcomePage from "./pages/WelcomePage";
 import MedicalScreen from "./pages/MedicalScreen";
 import Languages from "./pages/LanguageSelection";
 import Services from "./pages/Services";
+import TransitScreen from "./pages/TransitScreen";
 import RiderInformation from "./pages/RiderInformation";
 import FaresScreen from "./pages/FaresScreen";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -35,6 +36,10 @@ function App() {
             <Route path="/" element={<WelcomePage />} />
             <Route path="/Languages" element={<Languages />} />
             <Route path="/MedicalScreen" element={<MedicalScreen />} />
+            <Route
+              path="/Languages/Services/Transit"
+              element={<TransitScreen />}
+            />
             <Route
               path="/Languages/Services/Transit/RiderInformation"
               element={<RiderInformation />}

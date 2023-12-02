@@ -33,7 +33,7 @@ export default function Languages() {
         color={"red"}
         fontFamily={"Arial"}
       >
-        Your Well-being matters
+        Your well-being matters
       </Typography>
       <Typography>
         Alberta Health Services (AHS) is responsible for promoting wellness and
