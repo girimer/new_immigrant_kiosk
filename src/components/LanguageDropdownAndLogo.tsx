@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../Images/logo.png"; // Replace with your actual logo path
+import Logo from "../Images/logo.png";
 import LanguageDropdown from "./LanguageDropdown";
 
 interface LanguageDropdownProps {
