@@ -1,8 +1,14 @@
 import Header from "../components/Header";
 import Typography from "@mui/material/Typography";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { Button } from "@mui/material";
-import { Icon } from "@mui/material";
+import Button from "../components/buttons/ServicesButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHospitalUser,
+  faPhone,
+  faHospital,
+} from "@fortawesome/free-solid-svg-icons";
+
 export default function Languages() {
   const iconStyle = {
     padding: "16px", // Adjust the padding value as needed
@@ -12,11 +18,7 @@ export default function Languages() {
     padding: "2rem",
     margin: "5rem",
   };
-  const cardIcon = (
-    <Icon>
-      <img alt="edit" src="./src/Images/684833.svg" />
-    </Icon>
-  );
+
   return (
     <div>
       <Header />
@@ -45,21 +47,18 @@ export default function Languages() {
       <Typography>
         <strong>Tap to learn more about any of the following</strong>
       </Typography>
-      <div className="flex flex-row justify-center">
-        <Button
-          variant="outlined"
-          style={buttonStyle}
-          color="error"
-          startIcon={cardIcon}
-        >
-          Alberta Health Card
-        </Button>
-        <Button variant="outlined" style={buttonStyle} color="error">
-          Health Link
-        </Button>
-        <Button variant="outlined" style={buttonStyle} color="error">
-          Hospitals
-        </Button>
+      <div className="service-buttons">
+        <div className="button-row">
+          <Button to="" icon={<FontAwesomeIcon icon={faHospitalUser} />}>
+            Alberta Health Card
+          </Button>
+          <Button to="" icon={<FontAwesomeIcon icon={faPhone} />}>
+            Health Link
+          </Button>
+          <Button to="./Hospitals" icon={<FontAwesomeIcon icon={faHospital} />}>
+            Hospitals
+          </Button>
+        </div>
       </div>
     </div>
   );
