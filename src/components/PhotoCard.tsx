@@ -17,7 +17,7 @@ export default function PhotoCard({
   imagePath,
 }: PhotoCardProps) {
   return (
-    <Card sx={{ maxWidth: 400 }}>
+    <Card sx={{ maxWidth: 450 }}>
       <CardActionArea>
         <CardMedia
           component="img"
