@@ -62,10 +62,10 @@
 
   .transit-image-1 {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     width: 50%;
-    height: 60%;
+    height: 50%;
     background-image: url('../Images/Transit1Pic.jpg'); /* Replace with your image URL */
     background-size: 75% auto;
     background-position: center;
@@ -74,10 +74,10 @@
 
   .transit-image-2 {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     width: 50%;
-    height: 60%;
+    height: 50%;
     background-image: url('../Images/Transit2Pic.jpg'); /* Replace with your image URL */
     background-size: 75% auto;
     background-position: center;

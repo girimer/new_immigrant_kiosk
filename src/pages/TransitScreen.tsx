@@ -39,13 +39,13 @@ const TransitPage: React.FC = () => {
             Fares and Passes
           </Button>
           <Button
-            to="./RiderInformation"
+            to="./Rider-Information"
             icon={<FontAwesomeIcon icon={faUser} />}
           >
             Rider Information
           </Button>
           <Button
-            to="./ServiceUpdates"
+            to="./Service-Updates"
             icon={<FontAwesomeIcon icon={faBus} />}
           >
             Service Updates

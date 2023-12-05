@@ -37,13 +37,12 @@ function App() {
           <Routes>
             <Route path="/" element={<WelcomePage />} />
             <Route path="/Languages" element={<Languages />} />
-            <Route path="/MedicalScreen" element={<MedicalScreen />} />
             <Route
               path="/Languages/Services/Transit"
               element={<TransitScreen />}
             />
             <Route
-              path="/Languages/Services/Transit/RiderInformation"
+              path="/Languages/Services/Transit/Rider-Information"
               element={<RiderInformation />}
             />
             <Route
@@ -51,16 +50,16 @@ function App() {
               element={<FaresScreen />}
             />
             <Route
-              path="/Languages/Services/Transit/ServiceUpdates"
+              path="/Languages/Services/Transit/Service-Updates"
               element={<ServiceUpdates />}
             />
             <Route path="/Languages/Services" element={<Services />} />
             <Route
-              path="/Languages/Services/health"
+              path="/Languages/Services/Health"
               element={<MedicalScreen />}
             />
             <Route
-              path="/Languages/Services/health/Hospitals"
+              path="/Languages/Services/Health/Hospitals"
               element={<Hospitals />}
             />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
