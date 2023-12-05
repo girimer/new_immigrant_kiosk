@@ -1,6 +1,8 @@
 import Header from "../components/Header";
 import Heading from "../components/Heading";
 import "./HealthLinkPage.css";
+import logoImage from "../Images/811Logo.png";
+
 
 export default function Languages() {
   return (
@@ -14,9 +16,10 @@ export default function Languages() {
             <div id="subBody">For health advice or information, call Health Link 24/7 by dialing 811 or visit MyHealth.Alberta.ca.</div>
         </div>
         <div id="flex2">
-            <img src="./src/Images/811Logo.png"/>
+            <img src={logoImage} width={500} height={500}/>
         </div>
       </div>
     </div>
   );
 }
+        

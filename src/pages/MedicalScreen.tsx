@@ -19,7 +19,7 @@ export default function Languages() {
       ></Heading>
       <div className="service-buttons">
         <div className="button-row">
-          <Button to="" icon={<FontAwesomeIcon icon={faHospitalUser} />}>
+          <Button to="./HealthCard" icon={<FontAwesomeIcon icon={faHospitalUser} />}>
             Alberta Health Card
           </Button>
           <Button to="./HealthLink" icon={<FontAwesomeIcon icon={faPhone} />}>
