@@ -10,6 +10,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BannerProvider } from "./components/BannerContextProps";
 import ServicesSpanish from "./pages/ServicesSpanish";
 import Hospitals from "./pages/HospitalsPage";
+import HealthLink from "./pages/HealthLinkPage"
 
 const theme = createTheme({
   typography: {
@@ -58,6 +59,7 @@ function App() {
               path="/Languages/Services/health/Hospitals"
               element={<Hospitals />}
             />
+            <Route path="/Languages/Services/health/HealthLink" element={<HealthLink />} />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
           </Routes>
         </BrowserRouter>

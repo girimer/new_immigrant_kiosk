@@ -22,7 +22,7 @@ export default function Languages() {
           <Button to="" icon={<FontAwesomeIcon icon={faHospitalUser} />}>
             Alberta Health Card
           </Button>
-          <Button to="" icon={<FontAwesomeIcon icon={faPhone} />}>
+          <Button to="./HealthLink" icon={<FontAwesomeIcon icon={faPhone} />}>
             Health Link
           </Button>
           <Button to="./Hospitals" icon={<FontAwesomeIcon icon={faHospital} />}>
