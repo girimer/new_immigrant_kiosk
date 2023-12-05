@@ -6,7 +6,7 @@ import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 
 
-export default function LanguageScreen() {
+export default function MedicalScreen() {
   const iconStyle = {
     padding: "16px", // Adjust the padding value as needed
     fontSize: "7rem",
@@ -51,7 +51,7 @@ export default function LanguageScreen() {
       </Typography>
       <div className="flex flex-row justify-center" >
           <Button variant="outlined" style={buttonStyle} color="error" startIcon={cardIcon}>Alberta Health Card</Button>
-          <Button variant="outlined" style={buttonStyle} color="error" startIcon={PhoneIcon}>Health Link</Button>
+          <Button variant="outlined" style={buttonStyle} color="error" startIcon={PhoneIcon} onClick={() => {window.location.href="LanguageSelection.tsx"}}>Health Link</Button>
           <Button variant="outlined" style={buttonStyle} color="error" startIcon={buildingIcon}>Hospitals</Button>
         </div>
     </div>
