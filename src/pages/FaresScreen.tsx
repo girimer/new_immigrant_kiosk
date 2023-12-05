@@ -6,8 +6,8 @@ import calgaryTrainImage from "/src/Images/calgary-train.jpg";
 export default function FaresScreen() {
   return (
     <>
-      <Header />
-      <div className="flex justify-between">
+      <Header isLanguageDropdownVisible={true} rotateBannerText={true} />
+      <div className="flex justify-between ml-12">
         <div
           className="left-col"
           style={{ paddingLeft: "20px", maxWidth: "500px" }}
@@ -27,7 +27,7 @@ export default function FaresScreen() {
             <PassesTable />
           </div>
         </div>
-        <div className="right-col" style={{ paddingRight: "20px" }}>
+        <div className="right-col mr-12" style={{ paddingRight: "20px" }}>
           <PhotoCard
             headerVal="Special/Other passes"
             descriptionVal="Calgary Transit also offers other special types of passes, such as the Low Income Monthly pass or an annual pass for Regular Seniors. Learn more at www.calgarytransit.com"

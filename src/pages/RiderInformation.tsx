@@ -1,27 +1,25 @@
-import BackButton from "../components/buttons/BackButton";
-import ServiceButton from "../components/buttons/ServiceButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import RiderDialogBox from "../components/RiderDialogBox";
 import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
+import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
 import redLineImage from "/src/Images/red lines.png";
+import blueLineImage from "/src/Images/blue_line.png";
 import Header from "../components/Header";
 import { useState } from "react";
-import { faBus, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import "../components/buttons/ServicesButtton.css";
-
-type ArrowProps = {
-  val: number;
-};
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
+import Typography from "@mui/material/Typography";
 
 export default function RiderInformation() {
   const [open, setOpen] = useState(false);
-  const [selectedValue, setSelectedValue] = useState("val");
-  const [dialogBoxContent, setDialogBoxContent] = useState(0);
+  const [imagePath, setImagePath] = useState(redLineImage);
+  const [reference, setReference] = useState(
+    "By Zeekakboos - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=130293156"
+  );
 
-  const handleClickOpen = (id: number) => {
-    setDialogBoxContent(id);
+  const handleClickOpen = () => {
     setOpen(true);
   };
 
@@ -29,25 +27,136 @@ export default function RiderInformation() {
     setOpen(false);
   };
 
-  function PlanDialogBoxContent() {
-    if (dialogBoxContent === 0) {
-      return (
-        <>
-          <DialogTitle>Plan your trip</DialogTitle>
-          <IconButton
-            aria-label="close"
-            onClick={handleClose}
-            sx={{
-              position: "absolute",
-              right: 8,
-              top: 8,
-              color: (theme:any) => theme.palette.grey[500],
+  const handleRedLineClick = () => {
+    setImagePath(redLineImage);
+    setReference(
+      "By Zeekakboos - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=130293156"
+    );
+  };
+
+  const handleBlueLineClick = () => {
+    setImagePath(blueLineImage);
+    setReference(
+      "By Zeekakboos - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=130292914"
+    );
+  };
+
+  function DialogBoxContent() {
+    return (
+      <>
+        <DialogTitle>Train Lines</DialogTitle>
+        <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+        <div className="flex flex-row">
+          <div
+            className="color-red place-self-center"
+            style={{
+              width: "20px",
+              height: "20px",
+              marginLeft: "5px",
+              backgroundColor: "red",
             }}
+          ></div>
+          <div
+            style={{
+              fontSize: "1.2rem",
+              textDecoration: "underline",
+              paddingLeft: "5px",
+            }}
+            onClick={handleRedLineClick}
           >
-            <CloseIcon />
-          </IconButton>
+            Red Line
+          </div>
+        </div>
+        <div className="flex flex-row">
+          <div
+            className="place-self-center"
+            style={{
+              width: "20px",
+              height: "20px",
+              marginLeft: "5px",
+              backgroundColor: "blue",
+            }}
+          ></div>
+          <div
+            style={{
+              fontSize: "1.2rem",
+              textDecoration: "underline",
+              paddingLeft: "5px",
+            }}
+            onClick={handleBlueLineClick}
+          >
+            Blue Line
+          </div>
+        </div>
+        <img src={imagePath} alt="Red Line" />
+        <Typography variant="caption" sx={{ paddingLeft: "10px" }} gutterBottom>
+          {reference}
+        </Typography>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Header isLanguageDropdownVisible={true} rotateBannerText={true} />
+      <h2 className="service-page-title">Rider Information</h2>
+      <p className="service-page-description">
+        Below you can plan your trip to know where you want to go
+      </p>
+      <div className="flex flex-col justify-center">
+        <div className="flex flex-row justify-center">
+          <>
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={["Dalhouise", "Crowfoot", "Tuscany", "Somerset"]}
+              sx={{ width: 270, marginRight: "50px" }}
+              renderInput={(params) => (
+                <TextField {...params} label="From..." />
+              )}
+            />
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={["Dalhouise", "Crowfoot", "Tuscany", "Somerset"]}
+              sx={{ width: 270 }}
+              renderInput={(params) => <TextField {...params} label="To..." />}
+            />
+            <IconButton
+              onClick={handleClickOpen}
+              sx={{
+                position: "relative",
+                left: 20,
+                color: (theme) => theme.palette.grey[500],
+              }}
+            >
+              <InfoIcon
+                sx={{
+                  fontSize: "3rem",
+                }}
+              />
+            </IconButton>
+          </>
+          <RiderDialogBox
+            open={open}
+            onClose={handleClose}
+            DialogBoxContent={DialogBoxContent}
+          />
+        </div>
+        <div className="flex flex-row justify-center">
           <iframe
-            width="600"
+            width="700"
             height="450"
             style={{ border: "0" }}
             loading="lazy"
@@ -60,80 +169,7 @@ export default function RiderInformation() {
             &destination=Dalhousie+Station+Calgary
             &mode=transit`}
           ></iframe>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <DialogTitle>Bus Lines</DialogTitle>
-          <IconButton
-            aria-label="close"
-            onClick={handleClose}
-            sx={{
-              position: "absolute",
-              right: 8,
-              top: 8,
-              color: (theme:any) => theme.palette.grey[500],
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-          <div>
-            Red lines goes from Tuscany Station to Somerset station and vise
-            verisa.
-          </div>
-          <img src={redLineImage} alt="Red Line" />
-          <div>
-            By Zeekakboos - Own work, CC BY-SA 4.0,
-            https://commons.wikimedia.org/w/index.php?curid=130293156
-          </div>
-        </>
-      );
-    }
-  }
-
-  function ShowServiceButtons() {
-    return (
-      <div className="button-row">
-        <ServiceButton
-          icon={<FontAwesomeIcon icon={faCalendar} />}
-          onClick={() => {
-            handleClickOpen(0);
-          }}
-        >
-          Plan your Trip
-        </ServiceButton>
-        <ServiceButton
-          icon={<FontAwesomeIcon icon={faBus} />}
-          onClick={() => {
-            handleClickOpen(1);
-          }}
-        >
-          Bus Lines
-        </ServiceButton>
-      </div>
-    );
-  }
-
-  return (
-    <>
-      <Header />
-      <h2 className="service-page-title">Rider Information</h2>
-      <p className="service-page-description">
-        Below you can find common rider information to help you travel using
-        Calgary Transit easier
-      </p>
-      <div className="flex flex-col">
-        <div className="flex flex-row justify-center">
-          <ShowServiceButtons />
-          <RiderDialogBox
-            selectedValue={selectedValue}
-            open={open}
-            onClose={handleClose}
-            DialogBoxContent={PlanDialogBoxContent}
-          />
         </div>
-        <BackButton />
       </div>
     </>
   );

@@ -13,6 +13,7 @@ import {
   faPhone,
   faHouseChimney,
 } from "@fortawesome/free-solid-svg-icons";
+import Heading from "../components/Heading";
 
 const ServicesSpanish: React.FC = () => {
   return (
@@ -22,14 +23,11 @@ const ServicesSpanish: React.FC = () => {
         rotateBannerText={false}
       />
       <div>
-        <h2 className="service-page-title">Servicios</h2>
-        <p className="service-page-description">
-          No importa de dónde esté inmigrando, le brindamos una serie de
-          servicios para ayudar a los recién llegados a sentirse bienvenidos y
-          adaptarse a su nuevo hogar. Toque para obtener más información sobre
-          cualquiera de los siguientes servicios y recursos disponibles para
-          usted como nuevo calgariano.
-        </p>
+        <Heading
+          heading="Servicios"
+          subheading="No importa de dónde esté inmigrando, le brindamos una serie de servicios para ayudar a los recién llegados a sentirse bienvenidos y adaptarse a su nuevo hogar. Toque para obtener más información sobre cualquiera de los siguientes servicios y recursos disponibles para usted como nuevo calgariano."
+          includeTapToLearnMore={false}
+        />
         <div className="service-buttons">
           <div className="button-row">
             <Button to="./health" icon={<FontAwesomeIcon icon={faHeartbeat} />}>

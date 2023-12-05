@@ -10,6 +10,7 @@ import FaresScreen from "./pages/FaresScreen";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BannerProvider } from "./components/BannerContextProps";
 import ServicesSpanish from "./pages/ServicesSpanish";
+import Hospitals from "./pages/HospitalsPage";
 
 const theme = createTheme({
   typography: {
@@ -57,6 +58,10 @@ function App() {
             <Route
               path="/Languages/Services/health"
               element={<MedicalScreen />}
+            />
+            <Route
+              path="/Languages/Services/health/Hospitals"
+              element={<Hospitals />}
             />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
           </Routes>

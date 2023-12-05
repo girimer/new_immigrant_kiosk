@@ -2,16 +2,15 @@ import Dialog from "@mui/material/Dialog";
 
 export interface SimpleDialogProps {
   open: boolean;
-  selectedValue: string;
-  onClose: (value: string) => void;
+  onClose: () => void;
   DialogBoxContent: () => JSX.Element | null;
 }
 
 export default function RiderDialogBox(props: SimpleDialogProps) {
-  const { onClose, selectedValue, open, DialogBoxContent } = props;
+  const { onClose, open, DialogBoxContent } = props;
 
   const handleClose = () => {
-    onClose(selectedValue);
+    onClose();
   };
 
   return (

@@ -9,7 +9,7 @@ import Paper from "@mui/material/Paper";
 
 export default function FaresTable() {
   return (
-    <TableContainer component={Paper} sx={{ maxWidth: 400 }}>
+    <TableContainer component={Paper} sx={{ maxWidth: 500 }}>
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
