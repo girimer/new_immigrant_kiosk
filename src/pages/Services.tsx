@@ -27,25 +27,25 @@ const ServicesPage: React.FC = () => {
         />
         <div className="service-buttons">
           <div className="button-row">
-            <Button to="./health" icon={<FontAwesomeIcon icon={faHeartbeat} />}>
+            <Button to="./Health" icon={<FontAwesomeIcon icon={faHeartbeat} />}>
               Alberta Health Services
             </Button>
 
             <Button
-              to="./education"
+              to="./Education"
               icon={<FontAwesomeIcon icon={faGraduationCap} />}
             >
               Education
             </Button>
 
             <Button
-              to="./job-assistance"
+              to="./Job-Assistance"
               icon={<FontAwesomeIcon icon={faSuitcase} />}
             >
               Job Assistance
             </Button>
             <Button
-              to="./activities"
+              to="./Activities"
               icon={<FontAwesomeIcon icon={faBicycle} />}
             >
               Activities
@@ -58,19 +58,19 @@ const ServicesPage: React.FC = () => {
               Calgary Transit
             </Button>
 
-            <Button to="./social" icon={<FontAwesomeIcon icon={faUsers} />}>
+            <Button to="./Social" icon={<FontAwesomeIcon icon={faUsers} />}>
               Social Programs
             </Button>
 
             <Button
-              to="./emergency-services"
+              to="./Emergency-Services"
               icon={<FontAwesomeIcon icon={faPhone} />}
             >
               Emergency Services
             </Button>
 
             <Button
-              to="./housing"
+              to="./Housing"
               icon={<FontAwesomeIcon icon={faHouseChimney} />}
             >
               Housing

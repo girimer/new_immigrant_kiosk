@@ -15,7 +15,7 @@ import {
 const TransitPage: React.FC = () => {
   return (
     <>
-      <Header />
+      <Header isLanguageDropdownVisible={true} rotateBannerText={false} />
       <div>
         <h2 className="transit-page-title">
           Commute and travel safely
@@ -30,7 +30,7 @@ const TransitPage: React.FC = () => {
         <p className="transit-page-bold">
           Tap to learn more about any of the following
         </p>
-        <div className="transit-image"></div>
+        <div className="transit-image-1"></div>
         <div className="transit-buttons">
           <Button
             to="./Fares"
@@ -39,13 +39,13 @@ const TransitPage: React.FC = () => {
             Fares and Passes
           </Button>
           <Button
-            to="./RiderInformation"
+            to="./Rider-Information"
             icon={<FontAwesomeIcon icon={faUser} />}
           >
             Rider Information
           </Button>
           <Button
-            to="./RiderInformation" //change this to the correct one once implemented
+            to="./Service-Updates"
             icon={<FontAwesomeIcon icon={faBus} />}
           >
             Service Updates
