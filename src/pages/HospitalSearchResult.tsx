@@ -21,7 +21,7 @@ const data = [
     info: "Services Provided: Opioid Against Treatment, Alcohol disorder Treatment, Women's health, medical examation, Message Therapy",
   },
   {
-    name: "Peter Longheed Centre - Hospital",
+    name: "Providence Family Medical Centre",
     info: "Services Provided: Hematology, Respiratory, Vascular Surgery, Addictions, Mental Health and many more services.",
   },
 ];
@@ -44,7 +44,8 @@ const ExportMapMulitple = (props: AddressProp) => {
       src={`https://www.google.com/maps/embed/v1/place?key=${
         import.meta.env.VITE_GMAPS_KEY
       }
-            &q=${props.address}`}
+            &q=${props.address}
+            &zoom=13`}
     ></iframe>
   );
 };
