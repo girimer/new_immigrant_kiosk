@@ -5,8 +5,11 @@ Group members:
 - Jaza Khan
 - Minsu Kim
 - Girimer Singh
-- Fasial Hossain
+- Faisal Hossain
 - Jesse Dirks
+
+### Deployed on Netlify 🚀
+https://new-immigrant-kiosk.netlify.app/
 
 ### Project information 📄
 **What cases/functions were implemented?**<br>
