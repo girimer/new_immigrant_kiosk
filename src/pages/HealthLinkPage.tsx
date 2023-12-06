@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Heading from "../components/Heading";
 import "./HealthLinkPage.css";
+import Footer from "../components/Footer"
 import logoImage from "../Images/811Logo.png";
 
 
@@ -19,6 +20,10 @@ export default function Languages() {
             <img src={logoImage} width={500} height={500}/>
         </div>
       </div>
+      <Footer
+        heading="Have more questions?"
+        body="Connect with us by dialing 311. Our telephone agents have access to a language translation service that can assist citizens."
+      />
     </div>
   );
 }

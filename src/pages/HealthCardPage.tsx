@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Heading from "../components/Heading";
 import "./HealthCardPage.css";
+import Footer from "../components/Footer"
 import healthCard from "../Images/healthCard.png"
 
 export default function Languages() {
@@ -20,6 +21,10 @@ export default function Languages() {
             <img src={healthCard} alt="test"/>
         </div>
       </div>
+      <Footer
+        heading="Have more questions?"
+        body="Connect with us by dialing 311. Our telephone agents have access to a language translation service that can assist citizens."
+      />
     </div>
   );
 }
