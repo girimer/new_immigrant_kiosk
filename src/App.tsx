@@ -5,6 +5,7 @@ import Languages from "./pages/LanguageSelection";
 import Services from "./pages/Services";
 import TransitScreen from "./pages/TransitScreen";
 import RiderInformation from "./pages/RiderInformation";
+import ServiceUpdatesPage from "./pages/ServiceUpdates";
 import FaresScreen from "./pages/FaresScreen";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BannerProvider } from "./components/BannerContextProps";
@@ -37,7 +38,6 @@ function App() {
           <Routes>
             <Route path="/" element={<WelcomePage />} />
             <Route path="/Languages" element={<Languages />} />
-            <Route path="/MedicalScreen" element={<MedicalScreen />} />
             <Route
               path="/Languages/Services/Transit"
               element={<TransitScreen />}
@@ -49,6 +49,10 @@ function App() {
             <Route
               path="/Languages/Services/Transit/Fares"
               element={<FaresScreen />}
+            />
+            <Route
+              path="/Languages/Services/Transit/Service-Updates"
+              element={<ServiceUpdatesPage />}
             />
             <Route path="/Languages/Services" element={<Services />} />
             <Route

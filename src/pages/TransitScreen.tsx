@@ -24,7 +24,7 @@ const TransitPage: React.FC = () => {
         <p className="transit-page-bold">
           Tap to learn more about any of the following
         </p>
-        <div className="transit-image"></div>
+        <div className="transit-image-1"></div>
         <div className="transit-buttons">
           <Button to="./Fares" icon={<FontAwesomeIcon icon={faDollarSign} />}>
             Fares and Passes
@@ -36,7 +36,7 @@ const TransitPage: React.FC = () => {
             Rider Information
           </Button>
           <Button
-            to="./Rider Information" //change this to the correct one once implemented
+            to="./Service-Updates"
             icon={<FontAwesomeIcon icon={faBus} />}
           >
             Service Updates
