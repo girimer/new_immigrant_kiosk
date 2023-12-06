@@ -19,6 +19,8 @@ export default function RiderInformation() {
   const [reference, setReference] = useState(
     "By Zeekakboos - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=130293156"
   );
+  const [origin, setOrigin] = useState("Crowfoot Station");
+  const [destination, setDestination] = useState("Dalhousie Station");
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -40,6 +42,13 @@ export default function RiderInformation() {
     setReference(
       "By Zeekakboos - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=130292914"
     );
+  };
+  const onChangeMenuOrigin = (event: any, value: any) => {
+    setOrigin(value);
+  };
+
+  const onChangeMenuDestintion = (event: any, value: any) => {
+    setDestination(value);
   };
 
   function DialogBoxContent() {
@@ -121,7 +130,13 @@ export default function RiderInformation() {
             <Autocomplete
               disablePortal
               id="combo-box-demo"
-              options={["Dalhouise", "Crowfoot", "Tuscany", "Somerset"]}
+              options={[
+                "Dalhouise Station",
+                "Crowfoot Station",
+                "Tuscany Station",
+                "Somerset Station",
+              ]}
+              onChange={onChangeMenuOrigin}
               sx={{ width: 270, marginRight: "50px" }}
               renderInput={(params) => (
                 <TextField {...params} label="From..." />
@@ -130,8 +145,14 @@ export default function RiderInformation() {
             <Autocomplete
               disablePortal
               id="combo-box-demo"
-              options={["Dalhouise", "Crowfoot", "Tuscany", "Somerset"]}
+              options={[
+                "Dalhouise Station",
+                "Crowfoot Station",
+                "Tuscany Station",
+                "Somerset Station",
+              ]}
               sx={{ width: 270 }}
+              onChange={onChangeMenuDestintion}
               renderInput={(params) => <TextField {...params} label="To..." />}
             />
             <IconButton
@@ -166,8 +187,8 @@ export default function RiderInformation() {
             src={`https://www.google.com/maps/embed/v1/directions?key=${
               import.meta.env.VITE_GMAPS_KEY
             }
-            &origin=Crowfoot+Station+Calgary
-            &destination=Dalhousie+Station+Calgary
+            &origin=${origin}
+            &destination=${destination}
             &mode=transit`}
           ></iframe>
         </div>
