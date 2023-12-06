@@ -109,7 +109,7 @@ export default function RiderInformation() {
 
   return (
     <>
-      <Header isLanguageDropdownVisible={true} rotateBannerText={true} />
+      <Header isLanguageDropdownVisible={true} rotateBannerText={false} />
       <h2 className="service-page-title">Rider Information</h2>
       <p className="service-page-description">
         Below you can plan your trip to know where you want to go

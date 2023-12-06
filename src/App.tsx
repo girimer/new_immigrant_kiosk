@@ -5,12 +5,13 @@ import Languages from "./pages/LanguageSelection";
 import Services from "./pages/Services";
 import TransitScreen from "./pages/TransitScreen";
 import RiderInformation from "./pages/RiderInformation";
-import ServiceUpdates from "./pages/ServiceUpdates";
+import ServiceUpdatesPage from "./pages/ServiceUpdates";
 import FaresScreen from "./pages/FaresScreen";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BannerProvider } from "./components/BannerContextProps";
 import ServicesSpanish from "./pages/ServicesSpanish";
 import Hospitals from "./pages/HospitalsPage";
+import UnderConstruction from "./pages/UnderConstruction";
 
 const theme = createTheme({
   typography: {
@@ -42,7 +43,7 @@ function App() {
               element={<TransitScreen />}
             />
             <Route
-              path="/Languages/Services/Transit/Rider-Information"
+              path="/Languages/Services/Transit/Rider Information"
               element={<RiderInformation />}
             />
             <Route
@@ -51,18 +52,42 @@ function App() {
             />
             <Route
               path="/Languages/Services/Transit/Service-Updates"
-              element={<ServiceUpdates />}
+              element={<ServiceUpdatesPage />}
             />
             <Route path="/Languages/Services" element={<Services />} />
             <Route
-              path="/Languages/Services/Health"
+              path="/Languages/Services/Alberta Heath"
               element={<MedicalScreen />}
             />
             <Route
-              path="/Languages/Services/Health/Hospitals"
+              path="/Languages/Services/Alberta Heath/Hospitals"
               element={<Hospitals />}
             />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
+            <Route
+              path="/Languages/Services/Education"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Job Assistance"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Activities"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Social Programs"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Emergency Services"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Housing"
+              element={<UnderConstruction />}
+            />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
