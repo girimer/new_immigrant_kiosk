@@ -15,6 +15,8 @@ import HealthLink from "./pages/HealthLinkPage";
 import HealthCard from "./pages/HealthCardPage";
 import SearchResults from "./pages/HospitalSearchResult";
 import UnderConstruction from "./pages/UnderConstruction";
+import HospitalSearchResult from "./pages/HospitalSearchResult";
+import Logo from "./Images/logo.png";
 
 const theme = createTheme({
   typography: {
@@ -66,9 +68,18 @@ function App() {
               path="/Languages/Services/Alberta Heath/Hospitals"
               element={<Hospitals />}
             />
-            <Route path="/Languages/Services/Alberta Heath/HealthLink" element={<HealthLink />} />
-            <Route path="/Languages/Services/Alberta Heath/HealthCard" element={<HealthCard />} />
-            <Route path="/Languages/Services/Alberta Heath/Hospitals/SearchResults" element={<SearchResults />} />
+            <Route
+              path="/Languages/Services/Alberta Heath/Health Link"
+              element={<HealthLink />}
+            />
+            <Route
+              path="/Languages/Services/Alberta Heath/Health Card"
+              element={<HealthCard />}
+            />
+            <Route
+              path="/Languages/Services/Alberta Heath/Hospitals/Search Result"
+              element={<HospitalSearchResult />}
+            />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
             <Route
               path="/Languages/Services/Education"

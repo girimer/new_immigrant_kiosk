@@ -26,9 +26,12 @@
     "react-dom": "^18.2.0",
     "react-flagkit": "^2.0.4",
     "react-router-dom": "^6.20.0",
-    "sort-by": "^0.0.2"
+    "sort-by": "^0.0.2",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@types/react-slick": "^0.23.12",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",

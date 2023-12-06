@@ -1,5 +1,4 @@
-import React, { useState } from "react";  
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
@@ -13,8 +12,6 @@ const HospitalsSearchForm: React.FC = () => {
     distance: "",
   });
 
-  const navigate = useNavigate();
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -24,22 +21,10 @@ const HospitalsSearchForm: React.FC = () => {
     });
   };
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   // onSubmit(formState);
-  //   navigate("./SearchResult", {state: formState});
-  // };
-
-  const handleOnClick = (e: any) => {
-    // e.preventDefault();
-    // onSubmit(formState);
-    navigate("./SearchResults", {state: formState});
-  };
-
   return (
     <div className="search-container">
       <h2 className="search-header">Search for Hospitals</h2>
-      <form className="search-form" >
+      <form className="search-form">
         <div className="form-group">
           <label style={{ paddingRight: "85px" }} htmlFor="service">
             Service:
@@ -92,7 +77,7 @@ const HospitalsSearchForm: React.FC = () => {
             <option>T3N 0S5</option>
           </select>
         </div>
-        {/* <Link to={"./SearchResults"}> */}
+        <Link to={"./Search Result"}>
           <Button
             variant="outlined"
             size="small"
@@ -113,7 +98,6 @@ const HospitalsSearchForm: React.FC = () => {
                 backgroundColor: "#C61229",
               },
             }}
-            onClick={handleOnClick}
           >
             <div
               style={{
@@ -127,7 +111,7 @@ const HospitalsSearchForm: React.FC = () => {
             </div>
             <SearchIcon style={{ color: "white" }} />
           </Button>
-        {/* </Link> */}
+        </Link>
         <p style={{ color: "rgb(215, 213, 213)" }}> {"to add bottom margin"}</p>
         <p style={{ color: "rgb(215, 213, 213)" }}> {"to add bottom margin"}</p>
       </form>

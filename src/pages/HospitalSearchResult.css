@@ -1,29 +1,8 @@
-
-.search-container1{
-    background-color: rgb(215, 213, 213);
-    border-radius: 5px;
-}
-.search-header1 {
-    padding-top: 18px;
-    text-align: left;
-    font-size: 20px;
-    margin: 20px;
-    margin-left: 50px;
-    margin-top: 30px;
-}
-
-.subList{
-    padding-left: 10%;
-    padding-bottom: 3%;
-}
-
-.listHeader{
-    padding-bottom: 3%;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.subListBot{
-    padding-left: 10%;
-    padding-bottom: 5%;
-}
+.slick-prev {
+    left: 3% !important;
+    z-index: 1;
+  }
+  .slick-next {
+    right: 3% !important;
+    z-index: 1;
+  }
