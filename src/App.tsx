@@ -12,6 +12,7 @@ import ServicesSpanish from "./pages/ServicesSpanish";
 import Hospitals from "./pages/HospitalsPage";
 import HealthLink from "./pages/HealthLinkPage";
 import HealthCard from "./pages/HealthCardPage";
+import SerachResult from "./pages/HospitalSearchResult";
 
 const theme = createTheme({
   typography: {
@@ -62,6 +63,7 @@ function App() {
             />
             <Route path="/Languages/Services/health/HealthLink" element={<HealthLink />} />
             <Route path="/Languages/Services/health/HealthCard" element={<HealthCard />} />
+            <Route path="/Languages/Services/health/Hospitals/SearchResult" element={<SerachResult />} />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
           </Routes>
         </BrowserRouter>

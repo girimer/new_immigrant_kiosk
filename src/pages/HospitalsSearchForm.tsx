@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./HospitalsSearchForm.css";
 
 interface HospitalsFacilitiesFormProps {
@@ -15,6 +16,8 @@ const HospitalsSearchForm: React.FC<HospitalsFacilitiesFormProps> = ({
     distance: "",
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -27,6 +30,7 @@ const HospitalsSearchForm: React.FC<HospitalsFacilitiesFormProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit(formState);
+    navigate("./SearchResult", {state: formState});
   };
 
   return (
