@@ -11,7 +11,9 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BannerProvider } from "./components/BannerContextProps";
 import ServicesSpanish from "./pages/ServicesSpanish";
 import Hospitals from "./pages/HospitalsPage";
-import UnderConstruction from "./pages/UnderConstruction";
+import HealthLink from "./pages/HealthLinkPage";
+import HealthCard from "./pages/HealthCardPage";
+import SerachResult from "./pages/HospitalSearchResult";
 
 const theme = createTheme({
   typography: {
@@ -63,6 +65,9 @@ function App() {
               path="/Languages/Services/Alberta Heath/Hospitals"
               element={<Hospitals />}
             />
+            <Route path="/Languages/Services/health/HealthLink" element={<HealthLink />} />
+            <Route path="/Languages/Services/health/HealthCard" element={<HealthCard />} />
+            <Route path="/Languages/Services/health/Hospitals/SearchResult" element={<SerachResult />} />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
             <Route
               path="/Languages/Services/Education"

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from "react";  
+import { useNavigate } from 'react-router-dom';
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
@@ -12,6 +13,8 @@ const HospitalsSearchForm: React.FC = () => {
     distance: "",
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -19,6 +22,12 @@ const HospitalsSearchForm: React.FC = () => {
       ...formState,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSubmit(formState);
+    navigate("./SearchResult", {state: formState});
   };
 
   return (
