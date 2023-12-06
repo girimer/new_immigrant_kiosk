@@ -4,6 +4,7 @@ import Select from "@mui/material/Select";
 import FormControl from "@mui/material/FormControl";
 import Flag from "react-flagkit";
 import "./languageDropdown.css";
+import { useNavigate } from "react-router-dom";
 
 interface Language {
   code: string;
@@ -23,8 +24,7 @@ const languages: Language[] = [
 ];
 
 const getInitialState = () => {
-  if (window.location.href === "http://127.0.0.1:5173/ServicesSpanish")
-    return "es";
+  if (window.location.href.includes("ServicesSpanish")) return "es";
   return "us";
 };
 
@@ -36,16 +36,17 @@ const LanguageDropdown: React.FC<LanguageDropdownProps> = ({ isVisible }) => {
   const [selectedLanguage, setSelectedLanguage] =
     React.useState(getInitialState);
 
+  const navigate = useNavigate();
+
   const handleChange = (e: any) => {
     const selectedCode = e.target.value as string;
     setSelectedLanguage(selectedCode);
 
     if (selectedCode !== "us") {
       // Navigate to the static page for the selected language
-      window.location.href = `/${"ServicesSpanish"}`;
-      //window.location.href = `/Languages/Services/ServicesSpanish`;
+      navigate("/ServicesSpanish");
     } else {
-      window.location.href = `/${"Languages/Services"}`;
+      navigate("/Languages/Services");
     }
   };
 
