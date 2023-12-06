@@ -11,6 +11,7 @@ import "../components/buttons/ServicesButtton.css";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Typography from "@mui/material/Typography";
+import Footer from "../components/Footer";
 
 export default function RiderInformation() {
   const [open, setOpen] = useState(false);
@@ -171,6 +172,7 @@ export default function RiderInformation() {
           ></iframe>
         </div>
       </div>
+      <Footer heading={null} body={null} />
     </>
   );
 }

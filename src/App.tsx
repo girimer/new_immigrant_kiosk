@@ -54,21 +54,30 @@ function App() {
               element={<FaresScreen />}
             />
             <Route
-              path="/Languages/Services/Transit/Service-Updates"
+              path="/Languages/Services/Transit/Service Updates"
               element={<ServiceUpdatesPage />}
             />
             <Route path="/Languages/Services" element={<Services />} />
             <Route
-              path="/Languages/Services/Alberta Heath"
+              path="/Languages/Services/Alberta Health"
               element={<MedicalScreen />}
             />
             <Route
-              path="/Languages/Services/Alberta Heath/Hospitals"
+              path="/Languages/Services/Alberta Health/Hospitals"
               element={<Hospitals />}
             />
-            <Route path="/Languages/Services/Alberta Heath/HealthLink" element={<HealthLink />} />
-            <Route path="/Languages/Services/Alberta Heath/HealthCard" element={<HealthCard />} />
-            <Route path="/Languages/Services/Alberta Heath/Hospitals/SearchResults" element={<SearchResults />} />
+            <Route
+              path="/Languages/Services/Alberta Health/Health Link"
+              element={<HealthLink />}
+            />
+            <Route
+              path="/Languages/Services/Alberta Health/Health Card"
+              element={<HealthCard />}
+            />
+            <Route
+              path="/Languages/Services/Alberta Health/Hospitals/Search Results"
+              element={<SearchResults />}
+            />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
             <Route
               path="/Languages/Services/Education"

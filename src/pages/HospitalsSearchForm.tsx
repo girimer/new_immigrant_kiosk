@@ -1,5 +1,5 @@
-import React, { useState } from "react";  
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
@@ -33,13 +33,13 @@ const HospitalsSearchForm: React.FC = () => {
   const handleOnClick = (e: any) => {
     // e.preventDefault();
     // onSubmit(formState);
-    navigate("./SearchResults", {state: formState});
+    navigate("./Search Results", { state: formState });
   };
 
   return (
     <div className="search-container">
       <h2 className="search-header">Search for Hospitals</h2>
-      <form className="search-form" >
+      <form className="search-form">
         <div className="form-group">
           <label style={{ paddingRight: "85px" }} htmlFor="service">
             Service:
@@ -93,40 +93,40 @@ const HospitalsSearchForm: React.FC = () => {
           </select>
         </div>
         {/* <Link to={"./SearchResults"}> */}
-          <Button
-            variant="outlined"
-            size="small"
-            className="search-btn"
-            style={{
-              height: "100%",
-              width: "110px",
-              color: "white",
-              borderColor: "#C61229",
-              borderRadius: "14px",
+        <Button
+          variant="outlined"
+          size="small"
+          className="search-btn"
+          style={{
+            height: "100%",
+            width: "110px",
+            color: "white",
+            borderColor: "#C61229",
+            borderRadius: "14px",
+            backgroundColor: "#C61229",
+            fontSize: "16px",
+            float: "right",
+            marginRight: "75px",
+          }}
+          sx={{
+            "&:hover": {
               backgroundColor: "#C61229",
-              fontSize: "16px",
-              float: "right",
-              marginRight: "75px",
+            },
+          }}
+          onClick={handleOnClick}
+        >
+          <div
+            style={{
+              paddingRight: "10px",
+              fontWeight: "700",
+              textTransform: "none",
+              textDecoration: "none",
             }}
-            sx={{
-              "&:hover": {
-                backgroundColor: "#C61229",
-              },
-            }}
-            onClick={handleOnClick}
           >
-            <div
-              style={{
-                paddingRight: "10px",
-                fontWeight: "700",
-                textTransform: "none",
-                textDecoration: "none",
-              }}
-            >
-              Search
-            </div>
-            <SearchIcon style={{ color: "white" }} />
-          </Button>
+            Search
+          </div>
+          <SearchIcon style={{ color: "white" }} />
+        </Button>
         {/* </Link> */}
         <p style={{ color: "rgb(215, 213, 213)" }}> {"to add bottom margin"}</p>
         <p style={{ color: "rgb(215, 213, 213)" }}> {"to add bottom margin"}</p>

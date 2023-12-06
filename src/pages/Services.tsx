@@ -29,7 +29,7 @@ const ServicesPage: React.FC = () => {
         <div className="service-buttons">
           <div className="button-row">
             <Button
-              to="./Alberta Heath"
+              to="./Alberta Health"
               icon={<FontAwesomeIcon icon={faHeartbeat} />}
             >
               Alberta Health Services

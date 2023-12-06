@@ -9,14 +9,14 @@ export default function FaresScreen() {
     <>
       <Header isLanguageDropdownVisible={true} rotateBannerText={false} />
       <div className="flex justify-between ml-12">
-        <div
-          className="left-col"
-          style={{ paddingLeft: "20px", maxWidth: "500px" }}
-        >
-          <h2 style={{ textAlign: "left", marginLeft: "0", }} className="heading-container">
+        <div className="left-col" style={{ maxWidth: "500px" }}>
+          <h2
+            style={{ textAlign: "left", marginLeft: "0" }}
+            className="heading-container"
+          >
             Choose what's best for your needs
           </h2>
-          <p style={{marginTop:"40px", marginBottom: "40px"}}>
+          <p style={{ marginTop: "40px", marginBottom: "40px" }}>
             Calgary Transit offers many different options to help you get
             around. Here is an overview of the cost of fares and most common
             types of transit passes.
@@ -28,7 +28,7 @@ export default function FaresScreen() {
             <PassesTable />
           </div>
         </div>
-        <div className="right-col mr-12" style={{ paddingRight: "20px" }}>
+        <div className="right-col mr-12">
           <PhotoCard
             headerVal="Special/Other passes"
             descriptionVal="Calgary Transit also offers other special types of passes, such as the Low Income Monthly pass or an annual pass for Regular Seniors. Learn more at www.calgarytransit.com"

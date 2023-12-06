@@ -24,7 +24,7 @@ const Heading: React.FC<HeadingComponentProps> = ({
           paddingBottom={"10px"}
           color={"black"}
           fontSize={"16px"}
-          fontWeight={"550"}
+          fontWeight={"bold"}
           fontFamily={"Arial"}
         >
           Tap to learn more about any of the following

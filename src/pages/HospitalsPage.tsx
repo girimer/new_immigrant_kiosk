@@ -4,6 +4,7 @@ import HospitalsSearchForm from "./HospitalsSearchForm";
 import HospitalImage from "../Images/Hospital.png";
 import Header from "../components/Header";
 import Heading from "../components/Heading";
+import Footer from "../components/Footer";
 
 const HospitalsFacilitiesPage: React.FC = () => {
   const handleSubmit = (formData: any) => {};
@@ -61,6 +62,7 @@ const HospitalsFacilitiesPage: React.FC = () => {
           </div>
         </div>
       </div>
+      <Footer heading={null} body={null} />
     </>
   );
 };

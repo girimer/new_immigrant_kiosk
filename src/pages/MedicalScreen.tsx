@@ -20,10 +20,13 @@ export default function Languages() {
       ></Heading>
       <div className="service-buttons">
         <div className="button-row">
-          <Button to="./HealthCard" icon={<FontAwesomeIcon icon={faHospitalUser} />}>
+          <Button
+            to="./Health Card"
+            icon={<FontAwesomeIcon icon={faHospitalUser} />}
+          >
             Alberta Health Card
           </Button>
-          <Button to="./HealthLink" icon={<FontAwesomeIcon icon={faPhone} />}>
+          <Button to="./Health Link" icon={<FontAwesomeIcon icon={faPhone} />}>
             Health Link
           </Button>
           <Button to="./Hospitals" icon={<FontAwesomeIcon icon={faHospital} />}>
