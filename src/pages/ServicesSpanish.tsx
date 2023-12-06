@@ -3,6 +3,7 @@ import HeaderSpanish from "../components/HeaderSpanish";
 import "../components/buttons/ServicesButtton.css";
 import Button from "../components/buttons/ServicesButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FooterSpanish from "../components/FooterSpanish";
 import {
   faHeartbeat,
   faGraduationCap,
@@ -87,6 +88,7 @@ const ServicesSpanish: React.FC = () => {
           </div>
         </div>
       </div>
+      <FooterSpanish />
     </>
   );
 };
