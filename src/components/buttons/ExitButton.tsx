@@ -10,7 +10,7 @@ const ExitButton = () => {
         size="small"
         style={{
           height: "100%",
-          width: "100px",
+          width: "150px",
           color: "black",
           borderColor: "red",
           borderRadius: "14px",
@@ -22,7 +22,9 @@ const ExitButton = () => {
           },
         }}
       >
-        <div style={{ paddingRight: "10px", fontWeight: "600" }}>Exit</div>
+        <div style={{ paddingRight: "10px", fontWeight: "600" }}>
+          Exit Session
+        </div>
         <ExitToAppIcon style={{ color: "black" }} />
       </Button>
     </Link>
