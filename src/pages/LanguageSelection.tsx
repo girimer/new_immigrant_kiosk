@@ -54,9 +54,6 @@ export default function Languages() {
           <LanguageButton country="JP" language={"日本語"}></LanguageButton>
           <LanguageButton country="RU" language={"русский"}></LanguageButton>
         </div>
-        <div className="flex flex-row justify-center">
-          <Button variant="contained">Continue</Button>
-        </div>
       </div>
     </div>
   );
