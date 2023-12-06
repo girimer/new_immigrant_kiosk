@@ -13,10 +13,10 @@ export default function FaresScreen() {
           className="left-col"
           style={{ paddingLeft: "20px", maxWidth: "500px" }}
         >
-          <h2 style={{ color: "#df0c2e" }}>
+          <h2 style={{ textAlign: "left", marginLeft: "0", }} className="heading-container">
             Choose what's best for your needs
           </h2>
-          <p>
+          <p style={{marginTop:"40px", marginBottom: "40px"}}>
             Calgary Transit offers many different options to help you get
             around. Here is an overview of the cost of fares and most common
             types of transit passes.

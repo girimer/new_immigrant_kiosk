@@ -5,7 +5,7 @@ import "./HospitalSearchResult.css";
 import { useLocation } from "react-router-dom";
 
 
-export default function Languages() {
+export default function SearchResults() {
   const location = useLocation();
   const data = location.state;
   if (data.service == "cardiology"){
@@ -30,7 +30,7 @@ export default function Languages() {
   }
   return (
     <div>
-      <Header isLanguageDropdownVisible={null} rotateBannerText={null} />
+      <Header isLanguageDropdownVisible={true} rotateBannerText={true} />
       <div className="container">
         <div className="left-side">
           <Heading

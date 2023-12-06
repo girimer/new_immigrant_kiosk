@@ -13,7 +13,8 @@ import ServicesSpanish from "./pages/ServicesSpanish";
 import Hospitals from "./pages/HospitalsPage";
 import HealthLink from "./pages/HealthLinkPage";
 import HealthCard from "./pages/HealthCardPage";
-import SerachResult from "./pages/HospitalSearchResult";
+import SearchResults from "./pages/HospitalSearchResult";
+import UnderConstruction from "./pages/UnderConstruction";
 
 const theme = createTheme({
   typography: {
@@ -65,9 +66,9 @@ function App() {
               path="/Languages/Services/Alberta Heath/Hospitals"
               element={<Hospitals />}
             />
-            <Route path="/Languages/Services/health/HealthLink" element={<HealthLink />} />
-            <Route path="/Languages/Services/health/HealthCard" element={<HealthCard />} />
-            <Route path="/Languages/Services/health/Hospitals/SearchResult" element={<SerachResult />} />
+            <Route path="/Languages/Services/Alberta Heath/HealthLink" element={<HealthLink />} />
+            <Route path="/Languages/Services/Alberta Heath/HealthCard" element={<HealthCard />} />
+            <Route path="/Languages/Services/Alberta Heath/Hospitals/SearchResults" element={<SearchResults />} />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
             <Route
               path="/Languages/Services/Education"

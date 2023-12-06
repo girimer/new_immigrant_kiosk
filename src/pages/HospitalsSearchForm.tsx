@@ -24,16 +24,22 @@ const HospitalsSearchForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit(formState);
-    navigate("./SearchResult", {state: formState});
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // onSubmit(formState);
+  //   navigate("./SearchResult", {state: formState});
+  // };
+
+  const handleOnClick = (e: any) => {
+    // e.preventDefault();
+    // onSubmit(formState);
+    navigate("./SearchResults", {state: formState});
   };
 
   return (
     <div className="search-container">
       <h2 className="search-header">Search for Hospitals</h2>
-      <form className="search-form">
+      <form className="search-form" >
         <div className="form-group">
           <label style={{ paddingRight: "85px" }} htmlFor="service">
             Service:
@@ -86,7 +92,7 @@ const HospitalsSearchForm: React.FC = () => {
             <option>T3N 0S5</option>
           </select>
         </div>
-        <Link to={"./Hospitals"}>
+        {/* <Link to={"./SearchResults"}> */}
           <Button
             variant="outlined"
             size="small"
@@ -107,6 +113,7 @@ const HospitalsSearchForm: React.FC = () => {
                 backgroundColor: "#C61229",
               },
             }}
+            onClick={handleOnClick}
           >
             <div
               style={{
@@ -120,7 +127,7 @@ const HospitalsSearchForm: React.FC = () => {
             </div>
             <SearchIcon style={{ color: "white" }} />
           </Button>
-        </Link>
+        {/* </Link> */}
         <p style={{ color: "rgb(215, 213, 213)" }}> {"to add bottom margin"}</p>
         <p style={{ color: "rgb(215, 213, 213)" }}> {"to add bottom margin"}</p>
       </form>
