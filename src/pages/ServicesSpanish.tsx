@@ -30,25 +30,28 @@ const ServicesSpanish: React.FC = () => {
         />
         <div className="service-buttons">
           <div className="button-row">
-            <Button to="./health" icon={<FontAwesomeIcon icon={faHeartbeat} />}>
+            <Button
+              to="./Alberta Health"
+              icon={<FontAwesomeIcon icon={faHeartbeat} />}
+            >
               Servicios de salud de Alberta
             </Button>
 
             <Button
-              to="./education"
+              to="./Education"
               icon={<FontAwesomeIcon icon={faGraduationCap} />}
             >
               Educación
             </Button>
 
             <Button
-              to="./job-assistance"
+              to="./Job-Assistance"
               icon={<FontAwesomeIcon icon={faSuitcase} />}
             >
               Asistencia laboral
             </Button>
             <Button
-              to="./activities"
+              to="./Activities"
               icon={<FontAwesomeIcon icon={faBicycle} />}
             >
               Actividades
@@ -57,26 +60,26 @@ const ServicesSpanish: React.FC = () => {
 
           {/* Second Row */}
           <div className="button-row">
-            <Button
-              to="./Transit/RiderInformation"
-              icon={<FontAwesomeIcon icon={faBus} />}
-            >
+            <Button to="./Transit" icon={<FontAwesomeIcon icon={faBus} />}>
               Tránsito de Calgary
             </Button>
 
-            <Button to="./social" icon={<FontAwesomeIcon icon={faUsers} />}>
+            <Button
+              to="./Social Programs"
+              icon={<FontAwesomeIcon icon={faUsers} />}
+            >
               Programas Sociales
             </Button>
 
             <Button
-              to="./emergency-services"
+              to="./Emergency Services"
               icon={<FontAwesomeIcon icon={faPhone} />}
             >
               Servicios de emergencia
             </Button>
 
             <Button
-              to="./housing"
+              to="./Housing"
               icon={<FontAwesomeIcon icon={faHouseChimney} />}
             >
               Alojamiento

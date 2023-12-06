@@ -10,6 +10,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BannerProvider } from "./components/BannerContextProps";
 import ServicesSpanish from "./pages/ServicesSpanish";
 import Hospitals from "./pages/HospitalsPage";
+import UnderConstruction from "./pages/UnderConstruction";
 
 const theme = createTheme({
   typography: {
@@ -42,7 +43,7 @@ function App() {
               element={<TransitScreen />}
             />
             <Route
-              path="/Languages/Services/Transit/RiderInformation"
+              path="/Languages/Services/Transit/Rider Information"
               element={<RiderInformation />}
             />
             <Route
@@ -51,14 +52,38 @@ function App() {
             />
             <Route path="/Languages/Services" element={<Services />} />
             <Route
-              path="/Languages/Services/health"
+              path="/Languages/Services/Alberta Heath"
               element={<MedicalScreen />}
             />
             <Route
-              path="/Languages/Services/health/Hospitals"
+              path="/Languages/Services/Alberta Heath/Hospitals"
               element={<Hospitals />}
             />
             <Route path="/ServicesSpanish" element={<ServicesSpanish />} />
+            <Route
+              path="/Languages/Services/Education"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Job Assistance"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Activities"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Social Programs"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Emergency Services"
+              element={<UnderConstruction />}
+            />
+            <Route
+              path="/Languages/Services/Housing"
+              element={<UnderConstruction />}
+            />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

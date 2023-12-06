@@ -10,6 +10,7 @@ const Breadcrumb = () => {
         Home
       </Link>
       {pathnames.map((name, index) => {
+        name = name.replace("%20", " ");
         const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
         const isLast = index === pathnames.length - 1;
 

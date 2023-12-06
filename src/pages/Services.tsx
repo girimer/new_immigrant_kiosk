@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import "../components/buttons/ServicesButtton.css";
 import Button from "../components/buttons/ServicesButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Footer from "../components/Footer";
 import {
   faHeartbeat,
   faGraduationCap,
@@ -27,25 +28,28 @@ const ServicesPage: React.FC = () => {
         />
         <div className="service-buttons">
           <div className="button-row">
-            <Button to="./health" icon={<FontAwesomeIcon icon={faHeartbeat} />}>
+            <Button
+              to="./Alberta Heath"
+              icon={<FontAwesomeIcon icon={faHeartbeat} />}
+            >
               Alberta Health Services
             </Button>
 
             <Button
-              to="./education"
+              to="./Education"
               icon={<FontAwesomeIcon icon={faGraduationCap} />}
             >
               Education
             </Button>
 
             <Button
-              to="./job-assistance"
+              to="./Job Assistance"
               icon={<FontAwesomeIcon icon={faSuitcase} />}
             >
               Job Assistance
             </Button>
             <Button
-              to="./activities"
+              to="./Activities"
               icon={<FontAwesomeIcon icon={faBicycle} />}
             >
               Activities
@@ -58,19 +62,22 @@ const ServicesPage: React.FC = () => {
               Calgary Transit
             </Button>
 
-            <Button to="./social" icon={<FontAwesomeIcon icon={faUsers} />}>
+            <Button
+              to="./Social Programs"
+              icon={<FontAwesomeIcon icon={faUsers} />}
+            >
               Social Programs
             </Button>
 
             <Button
-              to="./emergency-services"
+              to="./Emergency Services"
               icon={<FontAwesomeIcon icon={faPhone} />}
             >
               Emergency Services
             </Button>
 
             <Button
-              to="./housing"
+              to="./Housing"
               icon={<FontAwesomeIcon icon={faHouseChimney} />}
             >
               Housing
@@ -78,6 +85,10 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
+      <Footer
+        heading="Have more questions?"
+        body="Connect with us by dialing 311. Our telephone agents have access to a language translation service that can assist citizens."
+      />
     </>
   );
 };
