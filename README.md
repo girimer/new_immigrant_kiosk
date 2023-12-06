@@ -9,6 +9,8 @@ Group members:
 - Jesse Dirks
 
 ### Project information 📄
+**What cases/functions were implemented?**<br>
+At this point in time, only two services have been fully implemented: the Calgary Transit screens as well as the Alberta Health Services screens. The rest of the services will display an under development message.<br><br>
 These are some instructions meant to serve as an exact walkthrough for using the kiosk:<br>
 Upon starting, you will be met with a welcome screen. To proceed, you need to click the Get Started button. Here you will find a language selection screen. Click on a language to set it as your language of choice for the entire kiosk. Then you will be at the Services screen, at which point you are able to select a service to learn more about it. The only screen which requires direct user input at this time is the "Alberta Health Services > Hospitals" screen, in which you are able to enter some values into the required fields. 
 
