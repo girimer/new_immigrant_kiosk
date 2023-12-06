@@ -3,10 +3,11 @@ import FaresTable from "../components/tables/FaresTable";
 import PassesTable from "../components/tables/PassesTable";
 import Header from "../components/Header";
 import calgaryTrainImage from "/src/Images/calgary-train.jpg";
+import Footer from "../components/Footer";
 export default function FaresScreen() {
   return (
     <>
-      <Header isLanguageDropdownVisible={true} rotateBannerText={true} />
+      <Header isLanguageDropdownVisible={true} rotateBannerText={false} />
       <div className="flex justify-between ml-12">
         <div
           className="left-col"
@@ -35,6 +36,10 @@ export default function FaresScreen() {
           />
         </div>
       </div>
+      <Footer
+        heading="Want to find out more?"
+        body="Visit www.calgarytransit.com/content/transit /en/home/fares---passes.html to learn more about special types of passes"
+      />
     </>
   );
 }

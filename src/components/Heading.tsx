@@ -1,5 +1,5 @@
 import React from "react";
-import "./heading.css";
+import "./Heading.css";
 import Typography from "@mui/material/Typography";
 
 interface HeadingComponentProps {

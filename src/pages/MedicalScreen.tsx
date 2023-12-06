@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Heading from "../components/Heading";
 import Button from "../components/buttons/ServicesButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Footer from "../components/Footer";
 import {
   faHospitalUser,
   faPhone,
@@ -30,6 +31,7 @@ export default function Languages() {
           </Button>
         </div>
       </div>
+      <Footer heading={null} body={null} />
     </div>
   );
 }

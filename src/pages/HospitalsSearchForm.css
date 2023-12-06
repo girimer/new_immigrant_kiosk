@@ -2,6 +2,7 @@
 .search-container{
     background-color: rgb(215, 213, 213);
     border-radius: 5px;
+    margin: 10px
 }
 .search-header {
     padding-top: 18px;
@@ -25,5 +26,4 @@ label {
   select,
   input {
     width: 60%;
-    /* Other styling as needed */
   }
