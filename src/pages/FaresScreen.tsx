@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 export default function FaresScreen() {
   return (
     <>
-      <Header isLanguageDropdownVisible={true} rotateBannerText={true} />
+      <Header isLanguageDropdownVisible={true} rotateBannerText={false} />
       <div className="flex justify-between ml-12">
         <div
           className="left-col"
