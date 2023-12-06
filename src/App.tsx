@@ -46,7 +46,7 @@ function App() {
               element={<TransitScreen />}
             />
             <Route
-              path="/Languages/Services/Transit/Rider Information"
+              path="/Languages/Services/Transit/Plan Trip"
               element={<RiderInformation />}
             />
             <Route

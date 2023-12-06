@@ -37,11 +37,8 @@ const TransitPage: React.FC = () => {
         <Button to="./Fares" icon={<FontAwesomeIcon icon={faDollarSign} />}>
           Fares and Passes
         </Button>
-        <Button
-          to="./Rider Information"
-          icon={<FontAwesomeIcon icon={faUser} />}
-        >
-          Rider Information
+        <Button to="./Plan Trip" icon={<FontAwesomeIcon icon={faUser} />}>
+          Plan your trip
         </Button>
         <Button to="./Service Updates" icon={<FontAwesomeIcon icon={faBus} />}>
           Service Updates
