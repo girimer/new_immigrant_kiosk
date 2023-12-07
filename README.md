@@ -31,7 +31,3 @@ Upon starting, you will be met with a welcome screen. To proceed, you need to cl
 in the same terminal in the same directory:<br>
 enter "npm run dev"<br>
 
-4. to change screens:<br>
-in `App.tsx`:<br>
-comment out the screens you do not want to see with ctrl+/<br>
-uncomment out the screens you do want to see also with ctrl+/<br>
